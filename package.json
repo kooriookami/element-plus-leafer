@@ -1,0 +1,42 @@
+{
+  "name": "element-plus-leafer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "build:lib": "vue-tsc -b && vite build -- lib",
+    "preview": "vite preview",
+    "lint": "eslint ./src ./packages --ext .vue,.js,.ts,.jsx,.tsx",
+    "lint-fix": "eslint --fix ./src ./packages --ext .vue,.js,.ts,.jsx,.tsx"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^4.1.0",
+    "@element-plus-leafer/components": "workspace:*",
+    "@element-plus-leafer/constants": "workspace:*",
+    "@element-plus-leafer/utils": "workspace:*",
+    "@leafer-in/flow": "^1.0.0",
+    "@leafer-in/state": "^1.0.0",
+    "element-plus": "^2.7.6",
+    "leafer-ui": "^1.0.0",
+    "vue": "^3.4.31"
+  },
+  "devDependencies": {
+    "@types/jsonfile": "^6.1.4",
+    "@typescript-eslint/parser": "^7.14.1",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "eslint": "^8.57.0",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "jsonfile": "^6.1.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "sass": "^1.77.6",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.2",
+    "vue-tsc": "^2.0.24"
+  }
+}
