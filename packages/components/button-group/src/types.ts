@@ -5,4 +5,4 @@ export type ButtonGroupProps = {
   size?: 'large' | 'default' | 'small' | ''
 }
 
-export type ButtonGroupInstance = ReturnType<typeof ButtonGroup>
+export type ButtonGroupInstance = InstanceType<typeof ButtonGroup>

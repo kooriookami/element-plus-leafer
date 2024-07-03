@@ -10,4 +10,4 @@ export type ButtonProps = {
   disabled?: boolean
 }
 
-export type ButtonInstance = ReturnType<typeof Button>
+export type ButtonInstance = InstanceType<typeof Button>

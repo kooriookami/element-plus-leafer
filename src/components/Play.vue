@@ -7,53 +7,53 @@
     view: window,
   });
 
-  const button11 = ElButton({ text: 'Default' });
-  const button12 = ElButton({ text: 'Primary', type: 'primary' });
-  const button13 = ElButton({ text: 'Success', type: 'success' });
-  const button14 = ElButton({ text: 'Info', type: 'info' });
-  const button15 = ElButton({ text: 'Warning', type: 'warning' });
-  const button16 = ElButton({ text: 'Danger', type: 'danger' });
+  const button11 = new ElButton({ text: 'Default' });
+  const button12 = new ElButton({ text: 'Primary', type: 'primary' });
+  const button13 = new ElButton({ text: 'Success', type: 'success' });
+  const button14 = new ElButton({ text: 'Info', type: 'info' });
+  const button15 = new ElButton({ text: 'Warning', type: 'warning' });
+  const button16 = new ElButton({ text: 'Danger', type: 'danger' });
 
-  const button21 = ElButton({ text: 'Plain', plain: true });
-  const button22 = ElButton({ text: 'Primary', type: 'primary', plain: true });
-  const button23 = ElButton({ text: 'Success', type: 'success', plain: true });
-  const button24 = ElButton({ text: 'Info', type: 'info', plain: true });
-  const button25 = ElButton({ text: 'Warning', type: 'warning', plain: true });
-  const button26 = ElButton({ text: 'Danger', type: 'danger', plain: true });
+  const button21 = new ElButton({ text: 'Plain', plain: true });
+  const button22 = new ElButton({ text: 'Primary', type: 'primary', plain: true });
+  const button23 = new ElButton({ text: 'Success', type: 'success', plain: true });
+  const button24 = new ElButton({ text: 'Info', type: 'info', plain: true });
+  const button25 = new ElButton({ text: 'Warning', type: 'warning', plain: true });
+  const button26 = new ElButton({ text: 'Danger', type: 'danger', plain: true });
 
-  const button31 = ElButton({ text: 'Round', round: true });
-  const button32 = ElButton({ text: 'Primary', type: 'primary', round: true });
-  const button33 = ElButton({ text: 'Success', type: 'success', round: true });
-  const button34 = ElButton({ text: 'Info', type: 'info', round: true });
-  const button35 = ElButton({ text: 'Warning', type: 'warning', round: true });
-  const button36 = ElButton({ text: 'Danger', type: 'danger', round: true });
+  const button31 = new ElButton({ text: 'Round', round: true });
+  const button32 = new ElButton({ text: 'Primary', type: 'primary', round: true });
+  const button33 = new ElButton({ text: 'Success', type: 'success', round: true });
+  const button34 = new ElButton({ text: 'Info', type: 'info', round: true });
+  const button35 = new ElButton({ text: 'Warning', type: 'warning', round: true });
+  const button36 = new ElButton({ text: 'Danger', type: 'danger', round: true });
 
-  const button41 = ElButton({ text: 'Default', disabled: true });
-  const button42 = ElButton({ text: 'Primary', type: 'primary', disabled: true });
-  const button43 = ElButton({ text: 'Success', type: 'success', disabled: true });
-  const button44 = ElButton({ text: 'Info', type: 'info', disabled: true });
-  const button45 = ElButton({ text: 'Warning', type: 'warning', disabled: true });
-  const button46 = ElButton({ text: 'Danger', type: 'danger', disabled: true });
+  const button41 = new ElButton({ text: 'Default', disabled: true });
+  const button42 = new ElButton({ text: 'Primary', type: 'primary', disabled: true });
+  const button43 = new ElButton({ text: 'Success', type: 'success', disabled: true });
+  const button44 = new ElButton({ text: 'Info', type: 'info', disabled: true });
+  const button45 = new ElButton({ text: 'Warning', type: 'warning', disabled: true });
+  const button46 = new ElButton({ text: 'Danger', type: 'danger', disabled: true });
 
-  const button51 = ElButton({ text: 'Plain', plain: true, disabled: true });
-  const button52 = ElButton({ text: 'Primary', type: 'primary', plain: true, disabled: true });
-  const button53 = ElButton({ text: 'Success', type: 'success', plain: true, disabled: true });
-  const button54 = ElButton({ text: 'Info', type: 'info', plain: true, disabled: true });
-  const button55 = ElButton({ text: 'Warning', type: 'warning', plain: true, disabled: true });
-  const button56 = ElButton({ text: 'Danger', type: 'danger', plain: true, disabled: true });
+  const button51 = new ElButton({ text: 'Plain', plain: true, disabled: true });
+  const button52 = new ElButton({ text: 'Primary', type: 'primary', plain: true, disabled: true });
+  const button53 = new ElButton({ text: 'Success', type: 'success', plain: true, disabled: true });
+  const button54 = new ElButton({ text: 'Info', type: 'info', plain: true, disabled: true });
+  const button55 = new ElButton({ text: 'Warning', type: 'warning', plain: true, disabled: true });
+  const button56 = new ElButton({ text: 'Danger', type: 'danger', plain: true, disabled: true });
 
-  const button61 = ElButton({ text: 'A', circle: true });
-  const button62 = ElButton({ text: 'B', type: 'primary', circle: true });
-  const button63 = ElButton({ text: 'C', type: 'success', circle: true });
-  const button64 = ElButton({ text: 'D', type: 'info', circle: true });
-  const button65 = ElButton({ text: 'E', type: 'warning', circle: true });
-  const button66 = ElButton({ text: 'F', type: 'danger', circle: true });
+  const button61 = new ElButton({ text: 'A', circle: true });
+  const button62 = new ElButton({ text: 'B', type: 'primary', circle: true });
+  const button63 = new ElButton({ text: 'C', type: 'success', circle: true });
+  const button64 = new ElButton({ text: 'D', type: 'info', circle: true });
+  const button65 = new ElButton({ text: 'E', type: 'warning', circle: true });
+  const button66 = new ElButton({ text: 'F', type: 'danger', circle: true });
 
-  const groupButton1 = ElButton({ text: 'Previous Page', type: 'primary' });
-  const groupButton2 = ElButton({ text: 'Current Page', type: 'primary' });
-  const groupButton3 = ElButton({ text: 'Next Page', type: 'primary' });
+  const groupButton1 = new ElButton({ text: 'Previous Page', type: 'primary' });
+  const groupButton2 = new ElButton({ text: 'Current Page', type: 'primary' });
+  const groupButton3 = new ElButton({ text: 'Next Page', type: 'primary' });
 
-  const buttonGroup = ElButtonGroup({
+  const buttonGroup = new ElButtonGroup({
     children: [groupButton1, groupButton2, groupButton3],
   });
 
