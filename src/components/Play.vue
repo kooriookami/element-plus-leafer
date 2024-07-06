@@ -7,7 +7,11 @@
     view: window,
   });
 
-  const button11 = new ElButton({ text: 'Default' });
+  function handleClick() {
+    alert('click');
+  }
+
+  const button11 = new ElButton({ text: 'Default', onClick: handleClick });
   const button12 = new ElButton({ text: 'Primary', type: 'primary' });
   const button13 = new ElButton({ text: 'Success', type: 'success' });
   const button14 = new ElButton({ text: 'Info', type: 'info' });

@@ -1,7 +1,7 @@
-import { Text } from 'leafer-ui';
+import { PointerEvent } from 'leafer-ui';
 import '@leafer-in/state';
 import { borderColorMap, colorMap, textColorMap, sizeMap, borderRadiusMap, presetFont } from '@element-plus-leafer/constants';
-import { Component, darken, lighten } from '@element-plus-leafer/utils';
+import { Component, darken, NOOP, lighten, isSameColor } from '@element-plus-leafer/utils';
 import type { ButtonProps } from './types';
 
 export const heightMap = {
@@ -63,6 +63,8 @@ export class Button extends Component<ButtonProps> {
     const round = this.props.round || false;
     const circle = this.props.circle || false;
     const disabled = this.props.disabled || false;
+    // events
+    const onClick = this.props.onClick || NOOP;
 
     const fill = plain ? lighten(fillMap[type], 90) : fillMap[type];
     const stroke = type ? (plain ? lighten(colorMap[type], 50) : colorMap[type]) : borderColorMap[''];
@@ -79,7 +81,7 @@ export class Button extends Component<ButtonProps> {
     this.set({
       height: heightMap[size],
       fill,
-      stroke,
+      stroke: isSameColor(stroke, fill) ? undefined : stroke,
       strokeWidth: 1,
       strokeAlign: 'inside',
       cornerRadius: round ? borderRadiusMap['round'] : circle ? borderRadiusMap['circle'] : cornerRadiusMap[size],
@@ -87,19 +89,20 @@ export class Button extends Component<ButtonProps> {
       disabled,
       hoverStyle: {
         fill: hoverFill,
-        stroke: hoverStroke,
+        stroke: isSameColor(hoverStroke, hoverFill) ? undefined : hoverStroke,
       },
       pressStyle: {
         fill: pressFill,
-        stroke: pressStroke,
+        stroke: isSameColor(pressStroke, pressFill) ? undefined : pressStroke,
       },
       disabledStyle: {
         fill: disabledFill,
-        stroke: disabledStroke,
+        stroke: isSameColor(disabledStroke, disabledFill) ? undefined : disabledStroke,
         cursor: 'not-allowed',
       },
       children: [
-        new Text({
+        {
+          tag: 'Text',
           width: circle ? heightMap[size] : undefined,
           textAlign: circle ? 'center' : undefined,
           text,
@@ -117,8 +120,10 @@ export class Button extends Component<ButtonProps> {
           disabledStyle: {
             fill: textDisabledFill,
           },
-        }),
+        },
       ],
     });
+
+    this.on(PointerEvent.CLICK, onClick);
   }
 }

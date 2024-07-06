@@ -8,6 +8,7 @@ export type ButtonProps = {
   round?: boolean
   circle?: boolean
   disabled?: boolean
+  onClick?: (...args: any) => any
 }
 
 export type ButtonInstance = InstanceType<typeof Button>

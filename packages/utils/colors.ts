@@ -9,3 +9,7 @@ export function darken(color: ColorInput, amount: number = 20) {
 export function lighten(color: ColorInput, amount: number = 20) {
   return new TinyColor(color).mix(colorMap.white, amount).toString();
 }
+
+export function isSameColor(color1: ColorInput, color2: ColorInput) {
+  return new TinyColor(color1).toString('rgb') === new TinyColor(color2).toString('rgb');
+}
