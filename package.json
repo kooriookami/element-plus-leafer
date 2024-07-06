@@ -11,6 +11,7 @@
     "build": "vue-tsc -b && vite build",
     "build:lib": "vue-tsc -b && vite build -- lib",
     "preview": "vite preview",
+    "publish": "npm publish dist/ --registry https://registry.npmjs.org",
     "lint": "eslint ./src ./packages --ext .vue,.js,.ts,.jsx,.tsx",
     "lint-fix": "eslint --fix ./src ./packages --ext .vue,.js,.ts,.jsx,.tsx"
   },
@@ -37,6 +38,7 @@
     "sass": "^1.77.6",
     "typescript": "^5.5.2",
     "vite": "^5.3.2",
+    "vite-plugin-dts": "^3.9.1",
     "vue-tsc": "^2.0.24"
   }
 }
