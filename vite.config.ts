@@ -65,9 +65,7 @@ const buildLib: BuildOptions = {
       },
     ],
     plugins: [
-      dts({
-        tsconfigPath: 'tsconfig.lib.json',
-      }),
+      dts(),
       copy({
         targets: [
           { src: './node_modules/.tmp/types/*', dest: 'dist/types' },
