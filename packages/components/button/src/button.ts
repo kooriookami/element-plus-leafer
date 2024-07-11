@@ -1,50 +1,36 @@
 import { PointerEvent } from 'leafer-ui';
 import '@leafer-in/state';
 import { borderColorMap, colorMap, textColorMap, sizeMap, borderRadiusMap, presetFont } from '@element-plus-leafer/constants';
-import { Component, darken, NOOP, lighten, isSameColor } from '@element-plus-leafer/utils';
+import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
 import type { ButtonProps } from './types';
 
-export const heightMap = {
-  'large': sizeMap['large'],
-  'default': sizeMap['default'],
-  'small': sizeMap['small'],
-};
-
-export const fillMap = {
+export const fillMap = defineMap({
+  ...colorMap,
   '': colorMap['white'],
-  'primary': colorMap['primary'],
-  'success': colorMap['success'],
-  'warning': colorMap['warning'],
-  'danger': colorMap['danger'],
-  'info': colorMap['info'],
-};
+}, '');
 
-export const strokeMap = {
+export const strokeMap = defineMap({
+  ...colorMap,
   '': borderColorMap[''],
-  'primary': colorMap['primary'],
-  'success': colorMap['success'],
-  'warning': colorMap['warning'],
-  'danger': colorMap['danger'],
-  'info': colorMap['info'],
-};
+}, '');
 
-export const cornerRadiusMap = {
+export const cornerRadiusMap = defineMap({
   'large': borderRadiusMap['base'],
   'default': borderRadiusMap['base'],
   'small': borderRadiusMap['small'],
-};
+});
 
-export const textFontSizeMap = {
+export const textFontSizeMap = defineMap({
   'large': 14,
   'default': 14,
   'small': 12,
-};
+});
 
-export const textPaddingMap = {
+export const textPaddingMap = defineMap({
   'large': [13, 20],
   'default': [9, 16],
   'small': [6, 12],
-};
+});
 
 export class Button extends Component<ButtonProps> {
   constructor(props: ButtonProps) {
@@ -57,12 +43,12 @@ export class Button extends Component<ButtonProps> {
 
   render() {
     const text = this.props.text || '';
-    const size = this.props.size || 'default';
+    const size = this.props.size || '';
     const type = this.props.type || '';
-    const plain = this.props.plain || false;
-    const round = this.props.round || false;
-    const circle = this.props.circle || false;
-    const disabled = this.props.disabled || false;
+    const plain = this.props.plain;
+    const round = this.props.round;
+    const circle = this.props.circle;
+    const disabled = this.props.disabled;
     // events
     const onClick = this.props.onClick || NOOP;
 
@@ -79,7 +65,7 @@ export class Button extends Component<ButtonProps> {
     const textDisabledFill = type ? (plain ? lighten(fillMap[type], 50) : colorMap['white']) : textColorMap['placeholder'];
 
     this.set({
-      height: heightMap[size],
+      height: sizeMap[size],
       fill,
       stroke: isSameColor(stroke, fill) ? undefined : stroke,
       strokeWidth: 1,
@@ -103,7 +89,7 @@ export class Button extends Component<ButtonProps> {
       children: [
         {
           tag: 'Text',
-          width: circle ? heightMap[size] : undefined,
+          width: circle ? sizeMap[size] : undefined,
           textAlign: circle ? 'center' : undefined,
           text,
           fill: textFill,
