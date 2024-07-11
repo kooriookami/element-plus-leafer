@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "build:lib": "vue-tsc -b && vite build -- lib",
+    "build": "vue-tsc && vite build",
+    "build:lib": "vue-tsc && vite build -- lib",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",

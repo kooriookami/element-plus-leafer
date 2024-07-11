@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "dist",
     "target": "ES2020",
     "module": "ESNext",
     "lib": [
@@ -20,14 +19,5 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "removeComments": false,
-    "rootDir": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@element-plus-leafer/*": [
-        "packages/*"
-      ]
-    }
   }
 }

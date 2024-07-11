@@ -65,10 +65,8 @@ const buildLib: BuildOptions = {
       },
     ],
     plugins: [
-      dts(),
       copy({
         targets: [
-          { src: './node_modules/.tmp/types/*', dest: 'dist/types' },
           { src: 'LICENSE', dest: 'dist' },
           { src: 'README.md', dest: 'dist' },
           { src: 'packages/package.json', dest: 'dist' },
@@ -88,14 +86,19 @@ const buildWebsite: BuildOptions = {
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    dts({
+      tsconfigPath: 'tsconfig.lib.json',
+      outDir: 'dist/types',
+    }),
+  ],
   server: {
     host: '0.0.0.0',
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      '@element-plus-leafer': path.resolve(__dirname, 'packages'),
     },
   },
   build: process.argv.includes('lib') ? buildLib : buildWebsite,

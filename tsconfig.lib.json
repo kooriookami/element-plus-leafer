@@ -1,11 +1,12 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.lib.tsbuildinfo",
     "rootDir": "packages",
-    "declaration": true,
-    "declarationDir": "./node_modules/.tmp/types",
-    "emitDeclarationOnly": true,
+    "paths": {
+      "@element-plus-leafer/*": [
+        "packages/*"
+      ]
+    }
   },
   "include": [
     "packages"
