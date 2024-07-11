@@ -1,6 +1,6 @@
 import { PointerEvent } from 'leafer-ui';
 import '@leafer-in/state';
-import { borderColorMap, colorMap, textColorMap, sizeMap, borderRadiusMap, presetFont } from '@element-plus-leafer/constants';
+import { borderColorMap, colorMap, textColorMap, sizeMap, borderRadiusMap } from '@element-plus-leafer/constants';
 import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
 import type { ButtonProps } from './types';
 
@@ -95,7 +95,6 @@ export class Button extends Component<ButtonProps> {
           fill: textFill,
           fontSize: textFontSizeMap[size],
           fontWeight: 500,
-          fontFamily: presetFont,
           lineHeight: textFontSizeMap[size],
           padding: textPaddingMap[size],
           hitBox: true,

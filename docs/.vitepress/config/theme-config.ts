@@ -10,12 +10,14 @@ export function getThemeConfig(lang: string): DefaultTheme.Config {
     ],
     sidebar: [
       {
-        text:'指南',
+        text: '指南',
+        link: `${prefix}/guide`
       },
       {
         text: '组件',
+        link: `${prefix}/component`,
         items: [
-          {text: '按钮', link: `${prefix}/component/button`},
+          {text: 'Button 按钮', link: `${prefix}/component/button`},
         ]
       }
     ],
