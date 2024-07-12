@@ -1,14 +1,14 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": "packages",
     "paths": {
-      "@/*": [
-        "src/*"
+      "@element-plus-leafer/*": [
+        "packages/*"
       ]
     }
   },
   "include": [
-    "src",
+    "packages"
   ]
 }

@@ -1,0 +1,43 @@
+{
+  "name": "element-plus-leafer",
+  "version": "0.0.1",
+  "description": "A Component Library for Leafer UI",
+  "keywords": [
+    "element-plus-leafer",
+    "element-plus",
+    "leafer-ui"
+  ],
+  "homepage": "https://kooriookami.github.io/element-plus-leafer/",
+  "bugs": {
+    "url": "https://github.com/kooriookami/element-plus-leafer/issues"
+  },
+  "license": "MIT",
+  "author": "kooriookami",
+  "main": "lib/index.cjs",
+  "module": "es/index.mjs",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./es/index.mjs",
+      "require": "./umd/index.js"
+    }
+  },
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kooriookami/element-plus-leafer.git"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^4.1.0",
+    "@leafer-in/flow": "^1.0.0",
+    "@leafer-in/state": "^1.0.0",
+    "leafer-ui": "^1.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "not ie 11",
+    "not op_mini all"
+  ]
+}
