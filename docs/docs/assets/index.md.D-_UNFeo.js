@@ -1,0 +1,1 @@
+import{c as e,o as t}from"./chunks/framework.BLHWSx9w.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),a={name:"index.md"},s=Object.assign(a,{setup(n){return window.location.href="/zh-CN",(o,r)=>(t(),e("div"))}});export{i as __pageData,s as default};

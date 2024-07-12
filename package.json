@@ -9,7 +9,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "build:lib": "vue-tsc && vite build -- lib",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -30,13 +29,11 @@
     "vue": "^3.4.31"
   },
   "devDependencies": {
-    "@types/jsonfile": "^6.1.4",
     "@typescript-eslint/parser": "^7.14.1",
     "@vitejs/plugin-vue": "^5.0.5",
     "eslint": "^8.57.0",
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-vue": "^9.26.0",
-    "jsonfile": "^6.1.0",
     "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.77.6",
     "typescript": "^5.5.2",
