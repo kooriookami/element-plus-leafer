@@ -1,7 +1,9 @@
 <script setup>
-import basic from '../../examples/button/basic.vue';
-import disabled from '../../examples/button/disabled.vue';
-import group from '../../examples/button/group.vue';
+import { defineClientComponent } from 'vitepress';
+
+const basic = defineClientComponent(() => import('../../examples/button/basic.vue'));
+const disabled = defineClientComponent(() => import('../../examples/button/disabled.vue'));
+const group = defineClientComponent(() => import('../../examples/button/group.vue'));
 </script>
 
 # Button 按钮
