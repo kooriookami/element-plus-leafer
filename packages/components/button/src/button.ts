@@ -32,6 +32,83 @@ export const textPaddingMap = defineMap({
   'small': [6, 12],
 });
 
+export const buttonVariant = (type: string) => {
+  return {
+    '': {
+      fill: fillMap[type],
+      stroke: colorMap[type],
+      textFill: colorMap['white'],
+    },
+    hover: {
+      fill: lighten(fillMap[type], 30),
+      stroke: lighten(fillMap[type], 30),
+      textFill: colorMap['white'],
+    },
+    press: {
+      fill: darken(fillMap[type], 20),
+      stroke: darken(fillMap[type], 20),
+      textFill: colorMap['white'],
+    },
+    disabled: {
+      fill: lighten(fillMap[type], 50),
+      stroke: lighten(fillMap[type], 50),
+      textFill: colorMap['white'],
+    },
+  };
+};
+
+export const buttonPlain = (type: string) => {
+  return {
+    '': {
+      fill: lighten(fillMap[type], 90),
+      stroke: lighten(fillMap[type], 50),
+      textFill: fillMap[type],
+    },
+    hover: {
+      fill: fillMap[type],
+      stroke: fillMap[type],
+      textFill: colorMap['white'],
+    },
+    press: {
+      textFill: colorMap['white'],
+    },
+    disabled: {},
+  };
+};
+
+export const buttonLink = (type: string) => {
+  return {
+    '': {
+      fill: lighten(fillMap[type], 90),
+      stroke: lighten(fillMap[type], 50),
+      textFill: fillMap[type],
+    },
+    hover: {
+      fill: fillMap[type],
+      stroke: fillMap[type],
+      textFill: lighten(fillMap[type], 50),
+    },
+    press: {
+      textFill: colorMap['white'],
+    },
+    disabled: {},
+  };
+};
+
+export const getColor = (props: ButtonProps, status: string, field: string) => {
+  const type = props.type || '';
+  const plain = props.plain;
+  const link = props.link;
+
+  if (plain) {
+    return buttonPlain(type)?.[status]?.[field];
+  } else if (link) {
+    return buttonLink(type)[status][field];
+  } else {
+    return buttonVariant(type)[status][field];
+  }
+};
+
 export class Button extends Component<ButtonProps> {
   constructor(props: ButtonProps) {
     super(props);
@@ -52,17 +129,17 @@ export class Button extends Component<ButtonProps> {
     // events
     const onClick = this.props.onClick || NOOP;
 
-    const fill = plain ? lighten(fillMap[type], 90) : fillMap[type];
-    const stroke = type ? (plain ? lighten(colorMap[type], 50) : colorMap[type]) : borderColorMap[''];
-    const hoverFill = type ? (plain ? fillMap[type] : lighten(fillMap[type], 30)) : (plain ? colorMap['white'] : lighten(fillMap['primary'], 90));
-    const hoverStroke = type ? (plain ? fillMap[type] : lighten(fillMap[type], 30)) : (plain ? fillMap['primary'] : lighten(fillMap['primary'], 70));
-    const pressFill = type ? darken(fillMap[type]) : (plain ? colorMap['white'] : lighten(fillMap['primary'], 90));
-    const pressStroke = type ? darken(fillMap[type]) : fillMap['primary'];
-    const disabledFill = plain ? lighten(fillMap[type], 90) : lighten(fillMap[type], 50);
-    const disabledStroke = type ? (plain ? lighten(strokeMap[type], 80) : lighten(strokeMap[type], 50)) : borderColorMap['light'];
-    const textFill = type ? (plain ? fillMap[type] : colorMap['white']) : textColorMap['regular'];
-    const textHoverFill = type ? colorMap['white'] : fillMap['primary'];
-    const textDisabledFill = type ? (plain ? lighten(fillMap[type], 50) : colorMap['white']) : textColorMap['placeholder'];
+    let fill = plain ? lighten(fillMap[type], 90) : fillMap[type];
+    let stroke = type ? (plain ? lighten(colorMap[type], 50) : colorMap[type]) : borderColorMap[''];
+    let hoverFill = type ? (plain ? fillMap[type] : lighten(fillMap[type], 30)) : (plain ? colorMap['white'] : lighten(fillMap['primary'], 90));
+    let hoverStroke = type ? (plain ? fillMap[type] : lighten(fillMap[type], 30)) : (plain ? fillMap['primary'] : lighten(fillMap['primary'], 70));
+    let pressFill = type ? darken(fillMap[type]) : (plain ? colorMap['white'] : lighten(fillMap['primary'], 90));
+    let pressStroke = type ? darken(fillMap[type]) : fillMap['primary'];
+    let disabledFill = plain ? lighten(fillMap[type], 90) : lighten(fillMap[type], 50);
+    let disabledStroke = type ? (plain ? lighten(strokeMap[type], 80) : lighten(strokeMap[type], 50)) : borderColorMap['light'];
+    let textFill = type ? (plain ? fillMap[type] : colorMap['white']) : textColorMap['regular'];
+    let textHoverFill = type ? colorMap['white'] : fillMap['primary'];
+    let textDisabledFill = type ? (plain ? lighten(fillMap[type], 50) : colorMap['white']) : textColorMap['placeholder'];
 
     this.set({
       height: sizeMap[size],

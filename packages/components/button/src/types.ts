@@ -5,6 +5,7 @@ export type ButtonProps = {
   size?: 'large' | 'default' | 'small' | ''
   type?: 'primary' | 'success' | 'warning' | 'danger' | 'info' | ''
   plain?: boolean
+  link?: boolean
   round?: boolean
   circle?: boolean
   disabled?: boolean

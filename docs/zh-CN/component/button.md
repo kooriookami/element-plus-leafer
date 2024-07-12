@@ -1,7 +1,10 @@
 <script setup>
-import basic from '../../examples/button/basic.vue';
-import disabled from '../../examples/button/disabled.vue';
-import group from '../../examples/button/group.vue';
+import { defineClientComponent } from 'vitepress';
+
+const Basic = defineClientComponent(() => import('../../examples/button/basic.vue'));
+const Disabled = defineClientComponent(() => import('../../examples/button/disabled.vue'));
+const Link = defineClientComponent(() => import('../../examples/button/link.vue'));
+const Group = defineClientComponent(() => import('../../examples/button/group.vue'));
 </script>
 
 # Button 按钮
@@ -12,7 +15,7 @@ import group from '../../examples/button/group.vue';
 
 使用 `type`、`plain`、`round` 和 `circle` 来定义按钮的样式。
 
-<basic />
+<Basic />
 
 ::: details 查看源代码
 
@@ -26,11 +29,21 @@ import group from '../../examples/button/group.vue';
 
 使用 `disabled` 属性来控制按钮是否为禁用状态。 该属性接受一个 `boolean` 类型的值。
 
-<disabled />
+<Disabled />
 
 ::: details 查看源代码
 
 <<< @/examples/button/disabled.vue
+
+:::
+
+## 链接按钮
+
+<Link />
+
+::: details 查看源代码
+
+<<< @/examples/button/link.vue
 
 :::
 
@@ -40,7 +53,7 @@ import group from '../../examples/button/group.vue';
 
 使用 `ElButtonGroup` 对多个按钮分组。
 
-<group />
+<Group />
 
 ::: details 查看源代码
 
