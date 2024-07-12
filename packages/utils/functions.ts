@@ -1,2 +1,2 @@
-export function NOOP() {
+export function NOOP(): void {
 }

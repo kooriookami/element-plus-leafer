@@ -1,8 +1,8 @@
 import { Box, Text } from 'leafer-ui';
-import { presetFont } from '@element-plus-leafer/constants';
+import { FontFamily } from '@element-plus-leafer/constants';
 
 export function resetAttr() {
-  Text.changeAttr('fontFamily', presetFont);
+  Text.changeAttr('fontFamily', FontFamily);
 }
 
 export abstract class Component<Props extends Record<string, any>> extends Box {

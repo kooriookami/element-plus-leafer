@@ -28,11 +28,11 @@
     const button16 = new ElButton({ text: 'Danger', type: 'danger', link: true });
 
     const button21 = new ElButton({ text: 'Plain', link: true, disabled: true });
-    const button22 = new ElButton({ text: 'Primary', type: 'primary', plain: true, link: true, disabled: true });
-    const button23 = new ElButton({ text: 'Success', type: 'success', plain: true, link: true, disabled: true });
-    const button24 = new ElButton({ text: 'Info', type: 'info', plain: true, link: true, disabled: true });
-    const button25 = new ElButton({ text: 'Warning', type: 'warning', plain: true, link: true, disabled: true });
-    const button26 = new ElButton({ text: 'Danger', type: 'danger', plain: true, link: true, disabled: true });
+    const button22 = new ElButton({ text: 'Primary', type: 'primary', link: true, disabled: true });
+    const button23 = new ElButton({ text: 'Success', type: 'success', link: true, disabled: true });
+    const button24 = new ElButton({ text: 'Info', type: 'info', link: true, disabled: true });
+    const button25 = new ElButton({ text: 'Warning', type: 'warning', link: true, disabled: true });
+    const button26 = new ElButton({ text: 'Danger', type: 'danger', link: true, disabled: true });
 
     const flow1 = new Flow({
       gap: 10,
