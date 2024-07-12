@@ -72,26 +72,36 @@ export const buttonPlain = (type: string) => {
     press: {
       textFill: colorMap['white'],
     },
-    disabled: {},
+    disabled: {
+      fill: lighten(fillMap[type], 90),
+      stroke: lighten(fillMap[type], 50),
+      textFill: textColorMap['placeholder'],
+    },
   };
 };
 
 export const buttonLink = (type: string) => {
   return {
     '': {
-      fill: lighten(fillMap[type], 90),
-      stroke: lighten(fillMap[type], 50),
+      fill: 'transparent',
+      stroke: 'transparent',
       textFill: fillMap[type],
     },
     hover: {
-      fill: fillMap[type],
-      stroke: fillMap[type],
+      fill: 'transparent',
+      stroke: 'transparent',
       textFill: lighten(fillMap[type], 50),
     },
     press: {
-      textFill: colorMap['white'],
+      fill: 'transparent',
+      stroke: 'transparent',
+      textFill: type ? darken(fillMap[type], 20) : textColorMap['primary'],
     },
-    disabled: {},
+    disabled: {
+      fill: 'transparent',
+      stroke: 'transparent',
+      textFill: type ? lighten(fillMap[type], 50) : textColorMap['placeholder'],
+    },
   };
 };
 
