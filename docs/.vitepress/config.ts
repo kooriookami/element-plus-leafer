@@ -5,7 +5,6 @@ import {getThemeConfig} from "./config/theme-config";
 export default defineConfig({
   title: "Element Plus Leafer",
   description: "A VitePress Site",
-  outDir: 'docs',
   locales: {
     'zh-CN': {
       label: '中文',
