@@ -13,7 +13,7 @@
   onMounted(() => {
     const leafer = new Leafer({
       view: container.value,
-      height: 74,
+      height: 40,
       wheel: {
         disabled: true,
         preventDefault: false,
