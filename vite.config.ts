@@ -3,6 +3,12 @@ import vue from '@vitejs/plugin-vue';
 import copy from 'rollup-plugin-copy';
 import path from 'path';
 import dts from 'vite-plugin-dts';
+import packageJson from './packages/package.json';
+
+const getExternal = () => {
+  const { dependencies } = packageJson;
+  return Object.keys(dependencies);
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -29,12 +35,7 @@ export default defineConfig({
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
-      external: [
-        'leafer-ui',
-        '@leafer-in/flow',
-        '@leafer-in/state',
-        '@ctrl/tinycolor',
-      ],
+      external: getExternal(),
       output: [
         {
           format: 'es',
