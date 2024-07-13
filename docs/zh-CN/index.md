@@ -4,22 +4,25 @@ layout: home
 
 hero:
   name: "Element Plus Leafer"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  text: "TypeScript"
+  tagline: 基于 Element Plus 样式的 Leafer UI 组件库
+  image:
+    src: /images/element-plus-logo-small.svg
+    alt: Element Plus Leafer
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 指南
+      link: /zh-CN/guide
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 组件
+      link: /zh-CN/component
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 实验性
+    details: 两个库会碰撞出什么火花呢？
+  - title: 未知性
+    details: 这种布局会成为主流吗？
+  - title: 不可篡改
+    details: 这就是一张图片对吧？
 ---
 

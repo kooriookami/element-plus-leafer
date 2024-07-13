@@ -3,6 +3,7 @@ import type {DefaultTheme} from "vitepress";
 export function getThemeConfig(lang: string): DefaultTheme.Config {
   const prefix = `/${lang}`
   return {
+    logo: '/images/element-plus-logo-small.svg',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       {text: '指南', link: `${prefix}/guide`},
