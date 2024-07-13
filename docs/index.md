@@ -1,3 +1,5 @@
 <script setup>
-window.location.href = "/zh-CN";
+if (typeof window !== "undefined") {
+  window.location.href = window.location.href + "zh-CN/";
+}
 </script>
