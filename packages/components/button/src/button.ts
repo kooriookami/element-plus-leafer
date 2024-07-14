@@ -1,13 +1,18 @@
 import { PointerEvent } from 'leafer-ui';
-import '@leafer-in/state';
 import { BorderColor, Color, TextColor, ComponentSize, BorderRadius, FontSize } from '@element-plus-leafer/constants';
 import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
 import type { ButtonProps } from './types';
 
-export const TextPadding = defineMap({
+export const Padding = defineMap({
   'large': [13, 20],
   'default': [9, 16],
   'small': [6, 12],
+});
+
+export const Gap = defineMap({
+  'large': 8,
+  'default': 6,
+  'small': 4,
 });
 
 export const buttonVariant = (type: ButtonProps['type']) => defineMap({
@@ -124,6 +129,7 @@ export class Button extends Component<ButtonProps> {
       link,
       round,
       circle,
+      icon,
       disabled,
       onClick = NOOP,
     } = this.props;
@@ -143,15 +149,22 @@ export class Button extends Component<ButtonProps> {
       disabledTextFill,
     } = getColor(this.props);
 
+    console.log(icon);
+
     this.set({
+      flow: true,
       height: link ? undefined : ComponentSize[size],
+      width: circle ? ComponentSize[size] : undefined,
       fill,
+      padding: link ? undefined : Padding[size],
       stroke: isSameColor(stroke, fill) ? undefined : stroke,
       strokeWidth: 1,
       strokeAlign: 'inside',
       cornerRadius: round ? BorderRadius.round : circle ? BorderRadius.circle : BorderRadius[size],
       cursor: 'pointer',
       disabled,
+      flowAlign: 'center',
+      gap: Gap[size],
       hoverStyle: {
         fill: hoverFill,
         stroke: isSameColor(hoverStroke, hoverFill) ? undefined : hoverStroke,
@@ -167,16 +180,20 @@ export class Button extends Component<ButtonProps> {
       },
       children: [
         {
+          tag: 'Image',
+          url: icon,
+          height: FontSize[size],
+          width: FontSize[size],
+          visible: icon ? true : 0,
+        },
+        {
           tag: 'Text',
-          width: circle ? ComponentSize[size] : undefined,
           textAlign: circle ? 'center' : undefined,
           text,
           fill: textFill,
           fontSize: FontSize[size],
           fontWeight: 500,
           lineHeight: FontSize[size],
-          padding: link ? undefined : TextPadding[size],
-          hitBox: true,
           disabled,
           hoverStyle: {
             fill: hoverTextFill,

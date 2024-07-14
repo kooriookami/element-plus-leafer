@@ -16,13 +16,19 @@ hero:
     - theme: alt
       text: 组件
       link: /zh-CN/component
+    - theme: alt
+      text: Github
+      link: https://github.com/kooriookami/element-plus-leafer
 
 features:
   - title: 实验性
+    icon: ⚠
     details: 两个库会碰撞出什么火花呢？
   - title: 未知性
+    icon: ❓
     details: 这种布局会成为主流吗？
   - title: 不可篡改
+    icon: 🚫
     details: 这就是一张图片对吧？
 ---
 

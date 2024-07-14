@@ -60,3 +60,21 @@ const Group = defineClientComponent(() => import('../../examples/button/group.vu
 <<< @/examples/button/group.vue
 
 :::
+
+## Button API
+
+### Button Attributes
+
+| 属性名          | 说明           | 类型                                                                          | 默认值     |
+|--------------|--------------|-----------------------------------------------------------------------------|---------|
+| text         | 文本           | `string`                                                                    | —       |
+| size         | 尺寸           | `'large'` \| `'default'` \| `'small'` \| `''`                               | —       |
+| type         | 类型           | `'primary'` \| `'success'` \| `'warning'` \| `'danger'` \| `'info'` \| `''` | —       |
+| plain        | 是否为朴素按钮      | `boolean`                                                                   | false   |
+| link         | 是否为链接按钮      | `boolean`                                                                   | false   |
+| round        | 是否为圆角按钮      | `boolean`                                                                   | false   |
+| circle       | 是否为圆形按钮      | `boolean`                                                                   | false   |
+| loading      | 是否为加载中状态     | `boolean`                                                                   | false   |
+| loading-icon | 自定义加载中状态图标组件 | ^[string] / ^[Component]                                                    | Loading |
+| disabled     | 按钮是否为禁用状态    | `boolean`                                                                   | false   |
+| icon         | 图标组件         | `string`                                                                    | —       |

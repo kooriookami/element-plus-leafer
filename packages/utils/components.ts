@@ -1,4 +1,6 @@
 import { Box, Text } from 'leafer-ui';
+import '@leafer-in/state';
+import '@leafer-in/flow';
 import { FontFamily } from '@element-plus-leafer/constants';
 
 export function resetAttr() {

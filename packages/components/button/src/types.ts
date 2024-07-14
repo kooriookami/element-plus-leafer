@@ -8,6 +8,7 @@ export type ButtonProps = {
   link?: boolean
   round?: boolean
   circle?: boolean
+  icon?: string
   disabled?: boolean
   onClick?: (...args: any) => any
 }

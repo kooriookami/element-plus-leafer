@@ -20,11 +20,10 @@
     });
 
     const groupButton1 = new ElButton({ text: 'Previous Page', type: 'primary' });
-    const groupButton2 = new ElButton({ text: 'Current Page', type: 'primary' });
-    const groupButton3 = new ElButton({ text: 'Next Page', type: 'primary' });
+    const groupButton2 = new ElButton({ text: 'Next Page', type: 'primary' });
 
     const buttonGroup = new ElButtonGroup({
-      children: [groupButton1, groupButton2, groupButton3],
+      children: [groupButton1, groupButton2],
     });
 
     leafer.add(buttonGroup);
