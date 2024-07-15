@@ -26,16 +26,16 @@ export class Icon extends Component<IconProps> {
   }
 
   render() {
-    const { icon, color, size } = this.props;
+    const { icon = '', color, size } = this.props;
 
     this.set({
+      visible: !!icon || 0,
       children: [
         {
           tag: 'Image',
           url: isSvg(icon) ? Platform.toURL(fillSvg(icon, color), 'svg') : icon,
           format: 'svg',
           height: size,
-          width: size,
         },
       ],
     });

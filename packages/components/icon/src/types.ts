@@ -1,7 +1,7 @@
 import type { Icon } from './icon';
 
 export type IconProps = {
-  icon: string
+  icon?: string
   color?: string
   size?: number
 }

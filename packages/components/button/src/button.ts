@@ -1,4 +1,5 @@
 import { PointerEvent } from 'leafer-ui';
+import { Icon } from '@element-plus-leafer/components';
 import { BorderColor, Color, TextColor, ComponentSize, BorderRadius, FontSize } from '@element-plus-leafer/constants';
 import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
 import type { ButtonProps } from './types';
@@ -149,8 +150,6 @@ export class Button extends Component<ButtonProps> {
       disabledTextFill,
     } = getColor(this.props);
 
-    console.log(icon);
-
     this.set({
       height: link ? undefined : ComponentSize[size],
       width: circle ? ComponentSize[size] : undefined,
@@ -178,13 +177,11 @@ export class Button extends Component<ButtonProps> {
         cursor: 'not-allowed',
       },
       children: [
-        {
-          tag: 'Image',
-          url: icon,
-          height: FontSize[size],
-          width: FontSize[size],
-          visible: icon ? true : 0,
-        },
+        new Icon({
+          icon,
+          color: textFill,
+          size: FontSize[size],
+        }),
         {
           tag: 'Text',
           textAlign: circle ? 'center' : undefined,
@@ -194,6 +191,7 @@ export class Button extends Component<ButtonProps> {
           fontWeight: 500,
           lineHeight: FontSize[size],
           disabled,
+          visible: !!text || 0,
           hoverStyle: {
             fill: hoverTextFill,
           },

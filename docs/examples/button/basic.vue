@@ -7,6 +7,12 @@
   import { Flow } from '@leafer-in/flow';
   import { ElButton } from '@element-plus-leafer/components';
   import { onMounted, ref } from 'vue';
+  import Search from '@element-plus/icons-svg/search.svg?raw';
+  import Edit from '@element-plus/icons-svg/edit.svg?raw';
+  import Check from '@element-plus/icons-svg/check.svg?raw';
+  import Message from '@element-plus/icons-svg/message.svg?raw';
+  import Star from '@element-plus/icons-svg/star.svg?raw';
+  import Delete from '@element-plus/icons-svg/delete.svg?raw';
 
   const container = ref(null);
 
@@ -41,12 +47,12 @@
     const button35 = new ElButton({ text: 'Warning', type: 'warning', round: true });
     const button36 = new ElButton({ text: 'Danger', type: 'danger', round: true });
 
-    const button41 = new ElButton({ text: 'A', circle: true });
-    const button42 = new ElButton({ text: 'B', type: 'primary', circle: true });
-    const button43 = new ElButton({ text: 'C', type: 'success', circle: true });
-    const button44 = new ElButton({ text: 'D', type: 'info', circle: true });
-    const button45 = new ElButton({ text: 'E', type: 'warning', circle: true });
-    const button46 = new ElButton({ text: 'F', type: 'danger', circle: true });
+    const button41 = new ElButton({ icon: Search, circle: true });
+    const button42 = new ElButton({ icon: Edit, type: 'primary', circle: true });
+    const button43 = new ElButton({ icon: Check, type: 'success', circle: true });
+    const button44 = new ElButton({ icon: Message, type: 'info', circle: true });
+    const button45 = new ElButton({ icon: Star, type: 'warning', circle: true });
+    const button46 = new ElButton({ icon: Delete, type: 'danger', circle: true });
 
     const flow = new Flow({
       flow: 'y',
