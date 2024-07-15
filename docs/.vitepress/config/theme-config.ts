@@ -33,6 +33,10 @@ export function getThemeConfig(lang: string): DefaultTheme.Config {
               text: 'Button 按钮',
               link: `${prefix}/component/button`
             },
+            {
+              text: 'Icon 图标',
+              link: `${prefix}/component/icon`
+            },
           ]
         }
       ]
