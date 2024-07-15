@@ -48,30 +48,31 @@
     const button45 = new ElButton({ text: 'E', type: 'warning', circle: true });
     const button46 = new ElButton({ text: 'F', type: 'danger', circle: true });
 
-    const flow1 = new Flow({
-      gap: 10,
-      children: [button11, button12, button13, button14, button15, button16],
-    });
-
-    const flow2 = new Flow({
-      gap: 10,
-      children: [button21, button22, button23, button24, button25, button26],
-    });
-
-    const flow3 = new Flow({
-      gap: 10,
-      children: [button31, button32, button33, button34, button35, button36],
-    });
-
-    const flow4 = new Flow({
-      gap: 10,
-      children: [button41, button42, button43, button44, button45, button46],
-    });
-
     const flow = new Flow({
       flow: 'y',
       gap: 10,
-      children: [flow1, flow2, flow3, flow4],
+      children: [
+        {
+          tag: 'Flow',
+          gap: 10,
+          children: [button11, button12, button13, button14, button15, button16],
+        },
+        {
+          tag: 'Flow',
+          gap: 10,
+          children: [button21, button22, button23, button24, button25, button26],
+        },
+        {
+          tag: 'Flow',
+          gap: 10,
+          children: [button31, button32, button33, button34, button35, button36],
+        },
+        {
+          tag: 'Flow',
+          gap: 10,
+          children: [button41, button42, button43, button44, button45, button46],
+        },
+      ],
     });
 
     leafer.add(flow);

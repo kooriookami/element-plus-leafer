@@ -1,6 +1,5 @@
-import { Flow } from '@leafer-in/flow';
+import { MathHelper } from 'leafer-ui';
 import { Component } from '@element-plus-leafer/utils';
-import { MathHelper } from '@leafer/math/src/MathHelper';
 import type { ButtonGroupProps } from './types';
 
 export class ButtonGroup extends Component<ButtonGroupProps> {
@@ -38,12 +37,8 @@ export class ButtonGroup extends Component<ButtonGroupProps> {
     }
 
     this.set({
-      children: [
-        new Flow({
-          gap: 1,
-          children,
-        }),
-      ],
+      gap: 1,
+      children,
     });
   }
 }

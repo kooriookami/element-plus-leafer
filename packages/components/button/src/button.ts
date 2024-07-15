@@ -152,7 +152,6 @@ export class Button extends Component<ButtonProps> {
     console.log(icon);
 
     this.set({
-      flow: true,
       height: link ? undefined : ComponentSize[size],
       width: circle ? ComponentSize[size] : undefined,
       fill,
