@@ -5,6 +5,9 @@ const Basic = defineClientComponent(() => import('../../examples/button/basic.vu
 const Disabled = defineClientComponent(() => import('../../examples/button/disabled.vue'));
 const Link = defineClientComponent(() => import('../../examples/button/link.vue'));
 const Group = defineClientComponent(() => import('../../examples/button/group.vue'));
+const Icon = defineClientComponent(() => import('../../examples/button/icon.vue'));
+const Loading = defineClientComponent(() => import('../../examples/button/loading.vue'));
+const Size = defineClientComponent(() => import('../../examples/button/size.vue'));
 </script>
 
 # Button 按钮
@@ -47,6 +50,20 @@ const Group = defineClientComponent(() => import('../../examples/button/group.vu
 
 :::
 
+## 图标按钮
+
+使用图标为按钮添加更多的含义。 你也可以单独使用图标不添加文字来节省显示区域占用。
+
+使用 `icon` 属性来为按钮添加图标。
+
+<Icon />
+
+::: details 查看源代码
+
+<<< @/examples/button/icon.vue
+
+:::
+
 ## 按钮组
 
 以按钮组的方式出现，常用于多项类似操作。
@@ -61,20 +78,47 @@ const Group = defineClientComponent(() => import('../../examples/button/group.vu
 
 :::
 
+## 加载状态按钮
+
+点击按钮来加载数据，并向用户反馈加载状态。
+
+通过设置 `loading` 属性为 `true` 来显示加载中状态。
+
+<Loading />
+
+::: details 查看源代码
+
+<<< @/examples/button/loading.vue
+
+:::
+
+## 调整尺寸
+
+除了默认的大小，按钮组件还提供了几种额外的尺寸可供选择，以便适配不同的场景。
+
+使用 `size` 属性额外配置尺寸，可使用 `large` 和 `small` 两种值。
+
+<Size />
+
+::: details 查看源代码
+
+<<< @/examples/button/size.vue
+
+:::
+
 ## Button API
 
-### Button Attributes
-
-| 属性名          | 说明           | 类型                                                                          | 默认值     |
-|--------------|--------------|-----------------------------------------------------------------------------|---------|
-| text         | 文本           | `string`                                                                    | —       |
-| size         | 尺寸           | `'large'` \| `'default'` \| `'small'` \| `''`                               | —       |
-| type         | 类型           | `'primary'` \| `'success'` \| `'warning'` \| `'danger'` \| `'info'` \| `''` | —       |
-| plain        | 是否为朴素按钮      | `boolean`                                                                   | false   |
-| link         | 是否为链接按钮      | `boolean`                                                                   | false   |
-| round        | 是否为圆角按钮      | `boolean`                                                                   | false   |
-| circle       | 是否为圆形按钮      | `boolean`                                                                   | false   |
-| loading      | 是否为加载中状态     | `boolean`                                                                   | false   |
-| loading-icon | 自定义加载中状态图标组件 | ^[string] / ^[Component]                                                    | Loading |
-| disabled     | 按钮是否为禁用状态    | `boolean`                                                                   | false   |
-| icon         | 图标组件         | `string`                                                                    | —       |
+| 属性名         | 说明           | 类型                                                                          | 默认值     |
+|-------------|--------------|-----------------------------------------------------------------------------|---------|
+| text        | 文本           | `string`                                                                    | —       |
+| size        | 尺寸           | `'large'` \| `'default'` \| `'small'` \| `''`                               | —       |
+| type        | 类型           | `'primary'` \| `'success'` \| `'warning'` \| `'danger'` \| `'info'` \| `''` | —       |
+| plain       | 是否为朴素按钮      | `boolean`                                                                   | false   |
+| link        | 是否为链接按钮      | `boolean`                                                                   | false   |
+| round       | 是否为圆角按钮      | `boolean`                                                                   | false   |
+| circle      | 是否为圆形按钮      | `boolean`                                                                   | false   |
+| loading     | 是否为加载中状态     | `boolean`                                                                   | false   |
+| loadingIcon | 自定义加载中状态图标组件 | `string`                                                                    | Loading |
+| disabled    | 按钮是否为禁用状态    | `boolean`                                                                   | false   |
+| icon        | 左侧图标         | `string`                                                                    | —       |
+| iconRight   | 右侧图标         | `string`                                                                    | —       |

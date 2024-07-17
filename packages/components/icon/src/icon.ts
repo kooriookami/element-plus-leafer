@@ -17,6 +17,8 @@ export const fillSvg = (value: string, color?: string) => {
 };
 
 export class Icon extends Component<IconProps> {
+  timer: ReturnType<typeof setInterval> | null = null;
+
   constructor(props: IconProps) {
     super(props);
   }
@@ -26,18 +28,35 @@ export class Icon extends Component<IconProps> {
   }
 
   render() {
-    const { icon = '', color, size } = this.props;
+    const { icon = '', color, size, loading } = this.props;
 
     this.set({
+      flow: false,
+      width: size,
+      height: size,
       visible: !!icon || 0,
       children: [
         {
-          tag: 'Image',
-          url: isSvg(icon) ? Platform.toURL(fillSvg(icon, color), 'svg') : icon,
-          format: 'svg',
+          tag: 'Rect',
+          fill: {
+            type: 'image',
+            url: isSvg(icon) ? Platform.toURL(fillSvg(icon, color), 'svg') : icon,
+            mode: 'fit',
+          },
+          width: size,
           height: size,
         },
       ],
     });
+
+    if (this.timer) {
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+    if (loading) {
+      this.timer = setInterval(() => {
+        this.children[0].rotateOf('center', 3);
+      }, 16.7);
+    }
   }
 }

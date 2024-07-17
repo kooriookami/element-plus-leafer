@@ -2,6 +2,7 @@ import { PointerEvent } from 'leafer-ui';
 import { Icon } from '@element-plus-leafer/components';
 import { BorderColor, Color, TextColor, ComponentSize, BorderRadius, FontSize } from '@element-plus-leafer/constants';
 import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
+import Loading from '@element-plus/icons-svg/loading.svg?raw';
 import type { ButtonProps } from './types';
 
 export const Padding = defineMap({
@@ -130,7 +131,10 @@ export class Button extends Component<ButtonProps> {
       link,
       round,
       circle,
+      loading,
+      loadingIcon,
       icon,
+      iconRight,
       disabled,
       onClick = NOOP,
     } = this.props;
@@ -160,7 +164,7 @@ export class Button extends Component<ButtonProps> {
       strokeAlign: 'inside',
       cornerRadius: round ? BorderRadius.round : circle ? BorderRadius.circle : BorderRadius[size],
       cursor: 'pointer',
-      disabled,
+      disabled: disabled || loading,
       flowAlign: 'center',
       gap: Gap[size],
       hoverStyle: {
@@ -174,13 +178,14 @@ export class Button extends Component<ButtonProps> {
       disabledStyle: {
         fill: disabledFill,
         stroke: isSameColor(disabledStroke, disabledFill) ? undefined : disabledStroke,
-        cursor: 'not-allowed',
+        cursor: disabled ? 'not-allowed' : undefined,
       },
       children: [
         new Icon({
-          icon,
+          icon: loading ? (loadingIcon ? loadingIcon : Loading) : icon,
           color: textFill,
           size: FontSize[size],
+          loading,
         }),
         {
           tag: 'Text',
@@ -202,6 +207,11 @@ export class Button extends Component<ButtonProps> {
             fill: disabledTextFill,
           },
         },
+        new Icon({
+          icon: iconRight,
+          color: textFill,
+          size: FontSize[size],
+        }),
       ],
     });
 
