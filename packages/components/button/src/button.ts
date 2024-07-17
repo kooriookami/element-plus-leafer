@@ -182,7 +182,7 @@ export class Button extends Component<ButtonProps> {
       },
       children: [
         new Icon({
-          icon: loading ? (loadingIcon ? loadingIcon : Loading) : icon,
+          icon: loading ? (loadingIcon || Loading) : icon,
           color: textFill,
           size: FontSize[size],
           loading,
