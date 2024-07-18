@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import copy from 'rollup-plugin-copy';
 import path from 'path';
 import dts from 'vite-plugin-dts';
 import packageJson from './packages/package.json';
@@ -49,16 +48,6 @@ const buildFullConfig = defineConfig({
           },
           entryFileNames: '[name].js',
         },
-      ],
-      plugins: [
-        copy({
-          targets: [
-            { src: 'LICENSE', dest: 'dist' },
-            { src: 'README.md', dest: 'dist' },
-            { src: 'packages/package.json', dest: 'dist' },
-          ],
-          hook: 'writeBundle',
-        }),
       ],
     },
     sourcemap: true,
