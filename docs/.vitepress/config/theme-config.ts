@@ -1,4 +1,4 @@
-import type {DefaultTheme} from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
 export function getThemeConfig(lang: string): DefaultTheme.Config {
   const prefix = `/${lang}`
@@ -21,14 +21,26 @@ export function getThemeConfig(lang: string): DefaultTheme.Config {
       [`${prefix}/guide/`]: [
         {
           text: '指南',
-          link: `${prefix}/guide`,
+          items: [
+            {
+              text: '简介',
+              link: `${prefix}/guide/`,
+            },
+            {
+              text: '快速开始',
+              link: `${prefix}/guide/start`,
+            },
+          ]
         },
       ],
       [`${prefix}/component/`]: [
         {
           text: '组件',
-          link: `${prefix}/component`,
           items: [
+            {
+              text: '简介',
+              link: `${prefix}/component/`
+            },
             {
               text: 'Button 按钮',
               link: `${prefix}/component/button`

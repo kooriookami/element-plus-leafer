@@ -9,6 +9,7 @@ const Icon = defineClientComponent(() => import('../../examples/button/icon.vue'
 const Loading = defineClientComponent(() => import('../../examples/button/loading.vue'));
 const Size = defineClientComponent(() => import('../../examples/button/size.vue'));
 const Custom = defineClientComponent(() => import('../../examples/button/custom.vue'));
+const Event = defineClientComponent(() => import('../../examples/button/event.vue'));
 </script>
 
 # Button 按钮
@@ -121,6 +122,18 @@ const Custom = defineClientComponent(() => import('../../examples/button/custom.
 
 :::
 
+## 交互事件
+
+按钮默认提供一个 `onClick` 点击事件，如果你需要其他事件，可以参考 Leafer UI 的[交互事件](https://leaferjs.com/ui/guide/event/ui/Pointer.html)。
+
+<Event />
+
+::: details 查看源代码
+
+<<< @/examples/button/event.vue
+
+:::
+
 ## Button API
 
 | 属性名         | 说明           | 类型                                                                          | 默认值     |
@@ -138,3 +151,4 @@ const Custom = defineClientComponent(() => import('../../examples/button/custom.
 | icon        | 左侧图标         | `string`                                                                    | —       |
 | iconRight   | 右侧图标         | `string`                                                                    | —       |
 | color       | 自定义按钮颜色      | `string`                                                                    | —       |
+| onClick     | 点击事件         | `Function`                                                                  | —       |
