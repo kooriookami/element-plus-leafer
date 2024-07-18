@@ -2,6 +2,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {},
   "include": [
+    "rollup.config.ts",
     "vite.config.ts"
   ]
 }

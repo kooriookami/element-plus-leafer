@@ -30,11 +30,13 @@
     "vue": "^3.4.31"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
     "@typescript-eslint/parser": "^7.14.1",
     "@vitejs/plugin-vue": "^5.0.5",
     "eslint": "^8.57.0",
     "eslint-define-config": "^2.1.0",
     "eslint-plugin-vue": "^9.26.0",
+    "rollup": "^4.18.1",
     "rollup-plugin-copy": "^3.5.0",
     "sass": "^1.77.6",
     "typescript": "^5.5.2",
