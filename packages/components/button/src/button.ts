@@ -17,85 +17,87 @@ export const Gap = defineMap({
   small: 4,
 });
 
-export const buttonVariant = (type: ButtonProps['type']) => defineMap({
+export const buttonVariant = (color: string) => defineMap({
   default: {
-    fill: type ? Color[type] : Color.white,
-    stroke: type ? Color[type] : BorderColor.default,
-    textFill: type ? Color.white : TextColor.regular,
+    fill: color ? color : Color.white,
+    stroke: color ? color : BorderColor.default,
+    textFill: color ? Color.white : TextColor.regular,
   },
   hover: {
-    fill: type ? lighten(Color[type], 30) : lighten(Color.primary, 90),
-    stroke: type ? lighten(Color[type], 30) : lighten(Color.primary, 70),
-    textFill: type ? Color.white : Color.primary,
+    fill: color ? lighten(color, 30) : lighten(Color.primary, 90),
+    stroke: color ? lighten(color, 30) : lighten(Color.primary, 70),
+    textFill: color ? Color.white : Color.primary,
   },
   press: {
-    fill: type ? darken(Color[type], 20) : lighten(Color.primary, 90),
-    stroke: type ? darken(Color[type], 20) : Color.primary,
-    textFill: type ? Color.white : Color.primary,
+    fill: color ? darken(color, 20) : lighten(Color.primary, 90),
+    stroke: color ? darken(color, 20) : Color.primary,
+    textFill: color ? Color.white : Color.primary,
   },
   disabled: {
-    fill: type ? lighten(Color[type], 50) : Color.white,
-    stroke: type ? lighten(Color[type], 50) : BorderColor.light,
-    textFill: type ? Color.white : TextColor.placeholder,
+    fill: color ? lighten(color, 50) : Color.white,
+    stroke: color ? lighten(color, 50) : BorderColor.light,
+    textFill: color ? Color.white : TextColor.placeholder,
   },
 });
 
-export const buttonPlain = (type: ButtonProps['type']) => defineMap({
+export const buttonPlain = (color: string) => defineMap({
   default: {
-    fill: type ? lighten(Color[type], 90) : Color.white,
-    stroke: type ? lighten(Color[type], 50) : BorderColor.default,
-    textFill: type ? Color[type] : TextColor.regular,
+    fill: color ? lighten(color, 90) : Color.white,
+    stroke: color ? lighten(color, 50) : BorderColor.default,
+    textFill: color ? color : TextColor.regular,
   },
   hover: {
-    fill: type ? Color[type] : Color.white,
-    stroke: type ? Color[type] : Color.primary,
-    textFill: type ? Color.white : Color.primary,
+    fill: color ? color : Color.white,
+    stroke: color ? color : Color.primary,
+    textFill: color ? Color.white : Color.primary,
   },
   press: {
-    fill: type ? darken(Color[type], 20) : Color.white,
-    stroke: type ? darken(Color[type], 20) : Color.primary,
-    textFill: type ? Color.white : Color.primary,
+    fill: color ? darken(color, 20) : Color.white,
+    stroke: color ? darken(color, 20) : Color.primary,
+    textFill: color ? Color.white : Color.primary,
   },
   disabled: {
-    fill: type ? lighten(Color[type], 90) : Color.white,
-    stroke: type ? lighten(Color[type], 80) : BorderColor.light,
-    textFill: type ? lighten(Color[type], 50) : TextColor.placeholder,
+    fill: color ? lighten(color, 90) : Color.white,
+    stroke: color ? lighten(color, 80) : BorderColor.light,
+    textFill: color ? lighten(color, 50) : TextColor.placeholder,
   },
 });
 
-export const buttonLink = (type: ButtonProps['type']) => defineMap({
+export const buttonLink = (color: string) => defineMap({
   default: {
     fill: 'transparent',
     stroke: 'transparent',
-    textFill: type ? Color[type] : TextColor.regular,
+    textFill: color ? color : TextColor.regular,
   },
   hover: {
     fill: 'transparent',
     stroke: 'transparent',
-    textFill: type ? lighten(Color[type], 50) : TextColor.secondary,
+    textFill: color ? lighten(color, 50) : TextColor.secondary,
   },
   press: {
     fill: 'transparent',
     stroke: 'transparent',
-    textFill: type ? darken(Color[type], 20) : TextColor.primary,
+    textFill: color ? darken(color, 20) : TextColor.primary,
   },
   disabled: {
     fill: 'transparent',
     stroke: 'transparent',
-    textFill: type ? lighten(Color[type], 50) : TextColor.placeholder,
+    textFill: color ? lighten(color, 50) : TextColor.placeholder,
   },
 });
 
 export const getColor = (props: ButtonProps) => {
   const { type, plain, link, color } = props;
 
+  const _color = color ? color : type ? Color[type] : '';
+
   const get = (status: 'default' | 'hover' | 'press' | 'disabled', field: 'fill' | 'stroke' | 'textFill') => {
     if (plain) {
-      return buttonPlain(type)[status][field];
+      return buttonPlain(_color)[status][field];
     } else if (link) {
-      return buttonLink(type)[status][field];
+      return buttonLink(_color)[status][field];
     } else {
-      return buttonVariant(type)[status][field];
+      return buttonVariant(_color)[status][field];
     }
   };
 

@@ -21,9 +21,9 @@
     });
 
     const button1 = new ElButton({ text: 'Default', color: '#626aef' });
-    const button2 = new ElButton({ text: 'Plain', color: '#626aef' });
-    const button3 = new ElButton({ text: 'Disabled', color: '#626aef' });
-    const button4 = new ElButton({ text: 'Disabled Plain', color: '#626aef' });
+    const button2 = new ElButton({ text: 'Plain', color: '#626aef', plain: true });
+    const button3 = new ElButton({ text: 'Disabled', color: '#626aef', disabled: true });
+    const button4 = new ElButton({ text: 'Disabled Plain', color: '#626aef', plain: true, disabled: true });
 
     const flow = new Flow({
       gap: 10,

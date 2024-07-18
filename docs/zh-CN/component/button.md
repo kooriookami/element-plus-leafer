@@ -137,3 +137,4 @@ const Custom = defineClientComponent(() => import('../../examples/button/custom.
 | disabled    | 按钮是否为禁用状态    | `boolean`                                                                   | false   |
 | icon        | 左侧图标         | `string`                                                                    | —       |
 | iconRight   | 右侧图标         | `string`                                                                    | —       |
+| color       | 自定义按钮颜色      | `string`                                                                    | —       |
