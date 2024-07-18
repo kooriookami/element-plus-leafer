@@ -8,6 +8,7 @@ const Group = defineClientComponent(() => import('../../examples/button/group.vu
 const Icon = defineClientComponent(() => import('../../examples/button/icon.vue'));
 const Loading = defineClientComponent(() => import('../../examples/button/loading.vue'));
 const Size = defineClientComponent(() => import('../../examples/button/size.vue'));
+const Custom = defineClientComponent(() => import('../../examples/button/custom.vue'));
 </script>
 
 # Button 按钮
@@ -103,6 +104,20 @@ const Size = defineClientComponent(() => import('../../examples/button/size.vue'
 ::: details 查看源代码
 
 <<< @/examples/button/size.vue
+
+:::
+
+## 自定义颜色
+
+你可以自定义按钮的颜色。
+
+我们将自动计算按钮不同状态时的颜色。
+
+<Custom />
+
+::: details 查看源代码
+
+<<< @/examples/button/custom.vue
 
 :::
 

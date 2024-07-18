@@ -13,6 +13,7 @@ export type ButtonProps = {
   icon?: string
   iconRight?: string
   disabled?: boolean
+  color?: string
   onClick?: (...args: any) => any
 }
 

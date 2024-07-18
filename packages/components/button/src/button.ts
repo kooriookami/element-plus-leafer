@@ -6,15 +6,15 @@ import Loading from '@element-plus/icons-svg/loading.svg?raw';
 import type { ButtonProps } from './types';
 
 export const Padding = defineMap({
-  'large': [13, 20],
-  'default': [9, 16],
-  'small': [6, 12],
+  large: [13, 20],
+  default: [9, 16],
+  small: [6, 12],
 });
 
 export const Gap = defineMap({
-  'large': 8,
-  'default': 6,
-  'small': 4,
+  large: 8,
+  default: 6,
+  small: 4,
 });
 
 export const buttonVariant = (type: ButtonProps['type']) => defineMap({
@@ -87,9 +87,9 @@ export const buttonLink = (type: ButtonProps['type']) => defineMap({
 });
 
 export const getColor = (props: ButtonProps) => {
-  const { type, plain, link } = props;
+  const { type, plain, link, color } = props;
 
-  const color = (status: 'default' | 'hover' | 'press' | 'disabled', field: 'fill' | 'stroke' | 'textFill') => {
+  const get = (status: 'default' | 'hover' | 'press' | 'disabled', field: 'fill' | 'stroke' | 'textFill') => {
     if (plain) {
       return buttonPlain(type)[status][field];
     } else if (link) {
@@ -100,18 +100,18 @@ export const getColor = (props: ButtonProps) => {
   };
 
   return {
-    fill: color('default', 'fill'),
-    stroke: color('default', 'stroke'),
-    textFill: color('default', 'textFill'),
-    hoverFill: color('hover', 'fill'),
-    hoverStroke: color('hover', 'stroke'),
-    hoverTextFill: color('hover', 'textFill'),
-    pressFill: color('press', 'fill'),
-    pressStroke: color('press', 'stroke'),
-    pressTextFill: color('press', 'textFill'),
-    disabledFill: color('disabled', 'fill'),
-    disabledStroke: color('disabled', 'stroke'),
-    disabledTextFill: color('disabled', 'textFill'),
+    fill: get('default', 'fill'),
+    stroke: get('default', 'stroke'),
+    textFill: get('default', 'textFill'),
+    hoverFill: get('hover', 'fill'),
+    hoverStroke: get('hover', 'stroke'),
+    hoverTextFill: get('hover', 'textFill'),
+    pressFill: get('press', 'fill'),
+    pressStroke: get('press', 'stroke'),
+    pressTextFill: get('press', 'textFill'),
+    disabledFill: get('disabled', 'fill'),
+    disabledStroke: get('disabled', 'stroke'),
+    disabledTextFill: get('disabled', 'textFill'),
   };
 };
 
