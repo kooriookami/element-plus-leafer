@@ -20,11 +20,11 @@
     ".": {
       "types": "./types/index.d.ts",
       "import": "./es/index.mjs",
-      "require": "./umd/index.js"
+      "require": "./lib/index.cjs"
     }
   },
-  "unpkg": "dist/index.js",
-  "jsdelivr": "dist/index.js",
+  "unpkg": "dist/index.full.js",
+  "jsdelivr": "dist/index.full.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kooriookami/element-plus-leafer.git"

@@ -51,7 +51,12 @@ const buildFullConfig = defineConfig({
             '@leafer-in/flow': 'LeaferIN.flow',
             '@leafer-in/state': 'LeaferIN.state',
           },
-          entryFileNames: '[name].js',
+          entryFileNames: '[name].full.js',
+        },
+        {
+          format: 'esm',
+          dir: 'dist/dist',
+          entryFileNames: '[name].full.mjs',
         },
       ],
     },
@@ -66,7 +71,7 @@ const buildModulesConfig = defineConfig({
       external: Object.keys(packageJson.dependencies),
       output: [
         {
-          format: 'es',
+          format: 'esm',
           dir: 'dist/es',
           preserveModules: true,
           preserveModulesRoot: 'packages',
