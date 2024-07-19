@@ -1,5 +1,5 @@
-import DefaultTheme from 'vitepress/theme'
-import './custom.css'
-import 'element-plus/es/components/message/style/css'
+import DefaultTheme from 'vitepress/theme';
+import './custom.css';
+import 'element-plus/theme-chalk/index.css';
 
-export default DefaultTheme
+export default DefaultTheme;

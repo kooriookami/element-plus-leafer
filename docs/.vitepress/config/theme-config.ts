@@ -1,7 +1,7 @@
-import type { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from 'vitepress';
 
 export function getThemeConfig(lang: string): DefaultTheme.Config {
-  const prefix = `/${lang}`
+  const prefix = `/${lang}`;
   return {
     logo: '/images/element-plus-logo-small.svg',
     // https://vitepress.dev/reference/default-theme-config
@@ -15,7 +15,7 @@ export function getThemeConfig(lang: string): DefaultTheme.Config {
         text: '组件',
         link: `${prefix}/component`,
         activeMatch: `${prefix}/component/`,
-      }
+      },
     ],
     sidebar: {
       [`${prefix}/guide/`]: [
@@ -30,7 +30,7 @@ export function getThemeConfig(lang: string): DefaultTheme.Config {
               text: '快速开始',
               link: `${prefix}/guide/start`,
             },
-          ]
+          ],
         },
       ],
       [`${prefix}/component/`]: [
@@ -39,22 +39,22 @@ export function getThemeConfig(lang: string): DefaultTheme.Config {
           items: [
             {
               text: '简介',
-              link: `${prefix}/component/`
+              link: `${prefix}/component/`,
             },
             {
               text: 'Button 按钮',
-              link: `${prefix}/component/button`
+              link: `${prefix}/component/button`,
             },
             {
               text: 'Icon 图标',
-              link: `${prefix}/component/icon`
+              link: `${prefix}/component/icon`,
             },
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
     socialLinks: [
-      {icon: 'github', link: 'https://github.com/kooriookami/element-plus-leafer'}
+      { icon: 'github', link: 'https://github.com/kooriookami/element-plus-leafer' },
     ],
-  }
+  };
 }
