@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import dts from 'vite-plugin-dts';
 import packageJson from './packages/package.json';
+import type { BuildOptions } from 'vite';
 
 const baseConfig = defineConfig({
   base: './',
@@ -19,6 +20,15 @@ const baseConfig = defineConfig({
   },
 });
 
+const baseBuildConfig: BuildOptions = {
+  lib: {
+    entry: path.resolve(__dirname, 'packages'),
+    name: 'ElementPlusLeafer',
+  },
+  sourcemap: true,
+  copyPublicDir: false,
+};
+
 const buildFullConfig = defineConfig({
   ...baseConfig,
   plugins: [
@@ -28,19 +38,14 @@ const buildFullConfig = defineConfig({
     }),
   ],
   build: {
-    lib: {
-      entry: path.resolve(__dirname, 'packages'),
-      name: 'ElementPlusLeafer',
-    },
+    ...baseBuildConfig,
     rollupOptions: {
-      // 确保外部化处理那些你不想打包进库的依赖
       external: ['leafer-ui', '@leafer-in/flow', '@leafer-in/state'],
       output: [
         {
+          name: 'ElementPlusLeafer',
           format: 'umd',
           dir: 'dist/dist',
-          name: 'ElementPlusLeafer',
-          // 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量
           globals: {
             'leafer-ui': 'LeaferUI',
             '@leafer-in/flow': 'LeaferIN.flow',
@@ -50,19 +55,14 @@ const buildFullConfig = defineConfig({
         },
       ],
     },
-    sourcemap: true,
   },
 });
 
-const buildLibConfig = defineConfig({
+const buildModulesConfig = defineConfig({
   ...baseConfig,
   build: {
-    lib: {
-      entry: path.resolve(__dirname, 'packages'),
-      name: 'ElementPlusLeafer',
-    },
+    ...baseBuildConfig,
     rollupOptions: {
-      // 确保外部化处理那些你不想打包进库的依赖
       external: Object.keys(packageJson.dependencies),
       output: [
         {
@@ -70,26 +70,37 @@ const buildLibConfig = defineConfig({
           dir: 'dist/es',
           preserveModules: true,
           preserveModulesRoot: 'packages',
-          entryFileNames: '[name].mjs',
+          entryFileNames: chunkInfo => {
+            if (chunkInfo.name.endsWith('.svg')) {
+              const name = chunkInfo.name.split('/').pop();
+              return `icons/${name}.mjs`;
+            }
+            return '[name].mjs';
+          },
         },
         {
           format: 'cjs',
           dir: 'dist/lib',
           preserveModules: true,
           preserveModulesRoot: 'packages',
-          entryFileNames: '[name].cjs',
+          entryFileNames: chunkInfo => {
+            if (chunkInfo.name.endsWith('.svg')) {
+              const name = chunkInfo.name.split('/').pop();
+              return `icons/${name}.cjs`;
+            }
+            return '[name].cjs';
+          },
         },
       ],
     },
-    sourcemap: true,
   },
 });
 
 let config = baseConfig;
 if (process.argv.includes('full')) {
   config = buildFullConfig;
-} else if (process.argv.includes('lib')) {
-  config = buildLibConfig;
+} else if (process.argv.includes('modules')) {
+  config = buildModulesConfig;
 }
 
 export default config;

@@ -5,11 +5,10 @@ import { deleteAsync } from 'del';
 gulp.task('clean', () => {
   return deleteAsync(['dist']);
 });
-gulp.task('tsc', shell.task('vue-tsc'));
 gulp.task('buildFull', shell.task('vite build -- full'));
-gulp.task('buildLib', shell.task('vite build -- lib'));
+gulp.task('buildModules', shell.task('vite build -- modules'));
 gulp.task('copy', () => {
   return gulp.src(['LICENSE', 'README.md', 'packages/package.json']).pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', gulp.series('clean', 'tsc', 'buildFull', 'buildLib', 'copy'));
+export default gulp.series('clean', 'buildFull', 'buildModules', 'copy');

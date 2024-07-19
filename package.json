@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "gulp build",
+    "build": "tsx node_modules/gulp-cli/bin/gulp.js",
     "preview": "vite preview",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -40,7 +40,7 @@
     "gulp": "^5.0.0",
     "gulp-shell": "^0.8.0",
     "sass": "^1.77.6",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.16.2",
     "typescript": "^5.5.2",
     "vite": "^5.3.2",
     "vite-plugin-dts": "^3.9.1",
