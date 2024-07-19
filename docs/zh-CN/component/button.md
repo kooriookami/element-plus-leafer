@@ -134,7 +134,7 @@ const Event = defineClientComponent(() => import('../../examples/button/event.vu
 
 :::
 
-## Button API
+## Button Props
 
 | 属性名         | 说明           | 类型                                                                          | 默认值     |
 |-------------|--------------|-----------------------------------------------------------------------------|---------|
@@ -152,3 +152,11 @@ const Event = defineClientComponent(() => import('../../examples/button/event.vu
 | iconRight   | 右侧图标         | `string`                                                                    | —       |
 | color       | 自定义按钮颜色      | `string`                                                                    | —       |
 | onClick     | 点击事件         | `Function`                                                                  | —       |
+
+## ButtonGroup Props
+
+| 属性名      | 说明             | 类型                                                                          | 默认值 |
+|----------|----------------|-----------------------------------------------------------------------------|-----|
+| size     | 用于控制该按钮组内按钮的大小 | `'large'` \| `'default'` \| `'small'` \| `''`                               | —   |
+| type     | 用于控制该按钮组内按钮的类型 | `'primary'` \| `'success'` \| `'warning'` \| `'danger'` \| `'info'` \| `''` | —   |
+| children | 	自定义按钮组按钮      | `ButtonInstance[]`                                                          | —   |

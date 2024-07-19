@@ -13,13 +13,15 @@ export class ButtonGroup extends Component<ButtonGroupProps> {
   }
 
   render() {
-    const children = this.props.children || [];
-    const size = this.props.size || '';
+    const { size, type, children = [] } = this.props;
 
     if (children.length > 1) {
       children.forEach((child, index) => {
         if (size) {
           child.props.size = size;
+        }
+        if (type) {
+          child.props.type = type;
         }
         if (index === 0) {
           const cornerRadius = MathHelper.fourNumber(child.cornerRadius as number | number[]);

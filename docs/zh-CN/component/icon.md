@@ -34,7 +34,7 @@ import Edit from '@element-plus/icons-svg/edit.svg?raw'; // [!code ++]
 
 推荐使用 Element Plus 的[官方图标](https://element-plus.org/zh-CN/component/icon.html#icon-collection)，原始 SVG 文件请安装 `@element-plus/icons-svg`。
 
-## Icon API
+## Icon Props
 
 | 属性名     | 说明      | 类型        | 默认值   |
 |---------|---------|-----------|-------|
