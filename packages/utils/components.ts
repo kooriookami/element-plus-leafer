@@ -3,6 +3,7 @@ import { Flow } from '@leafer-in/flow';
 import '@leafer-in/state';
 import '@leafer-in/flow';
 import { FontFamily } from '@element-plus-leafer/constants';
+import type { IFlowInputData } from '@leafer-ui/interface';
 
 export function resetAttr() {
   Text.changeAttr('fontFamily', FontFamily);
@@ -11,8 +12,8 @@ export function resetAttr() {
 export abstract class Component<Props extends Record<string, any>> extends Flow {
   props: Props;
 
-  protected constructor(props: Props) {
-    super();
+  protected constructor(props: Props, data?: IFlowInputData) {
+    super(data);
     resetAttr();
     this.props = this.proxyProps(props);
     this.render();

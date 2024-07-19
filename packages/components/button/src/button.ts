@@ -4,6 +4,7 @@ import { BorderColor, Color, TextColor, ComponentSize, BorderRadius, FontSize } 
 import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
 import Loading from '@element-plus/icons-svg/loading.svg?raw';
 import type { ButtonProps } from './types';
+import type { IFlowInputData } from '@leafer-ui/interface';
 
 export const Padding = defineMap({
   large: [13, 20],
@@ -118,8 +119,8 @@ export const getColor = (props: ButtonProps) => {
 };
 
 export class Button extends Component<ButtonProps> {
-  constructor(props: ButtonProps) {
-    super(props);
+  constructor(props: ButtonProps, data?: IFlowInputData) {
+    super(props, data);
   }
 
   public get __tag() {

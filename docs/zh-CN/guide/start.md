@@ -42,13 +42,12 @@ $ bun add element-plus-leafer
 
 Element Plus Leafer 支持所有现代浏览器，默认语法为 ES2020。
 
-如果需要支持旧版浏览器，请自行添加 [Babel](https://babeljs.io/) 和相应的 Polyfill。
+如果需要支持旧版浏览器，请自行添加 [Babel](https://babeljs.io) 和相应的 Polyfill。
 
 由于使用了 `Proxy` 方法，最低转义语法为 ES2015，固不支持 IE。
 
 ## 开始体验
 
-下面是一个完整的示例，请复制到 HTML 文档中用浏览器打开。
+下面是一个完整的 CDN 使用示例。[在线演示](https://codepen.io/kooriookami/pen/OJeNPLp)
 
-```html
-```
+<iframe height="400" width="100%" src="https://codepen.io/kooriookami/embed/OJeNPLp?theme-id=light&default-tab=html,result" frameborder="no"></iframe>

@@ -10,9 +10,10 @@
     },
   });
 
-  const button = new ElButton({ text: 'Hello World!', type: 'primary' });
-  button.x = 20;
-  button.y = 20;
+  const button = new ElButton(
+    { text: 'Hello World!', type: 'primary' },
+    { x: 20, y: 20 },
+  );
 
   leafer.add(button);
 </script>

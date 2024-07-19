@@ -1,6 +1,7 @@
 import { Platform } from 'leafer-ui';
 import { Component } from '@element-plus-leafer/utils';
 import type { IconProps } from './types';
+import type { IFlowInputData } from '@leafer-ui/interface';
 
 export const isSvg = (value: string) => {
   return /<svg.*?>.*?<\/svg>/.test(value);
@@ -19,8 +20,8 @@ export const fillSvg = (value: string, color?: string) => {
 export class Icon extends Component<IconProps> {
   timer: ReturnType<typeof setInterval> | null = null;
 
-  constructor(props: IconProps) {
-    super(props);
+  constructor(props: IconProps, data?: IFlowInputData) {
+    super(props, data);
   }
 
   public get __tag() {
