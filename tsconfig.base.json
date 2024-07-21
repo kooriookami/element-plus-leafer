@@ -19,6 +19,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "removeComments": false,
-    "types": ["vite/client"]
-  },
+    "types": [
+      "vite/client"
+    ]
+  }
 }

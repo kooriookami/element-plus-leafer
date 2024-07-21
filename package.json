@@ -26,6 +26,7 @@
     "@leafer-in/flow": "^1.0.1",
     "@leafer-in/state": "^1.0.1",
     "element-plus": "^2.7.7",
+    "element-plus-leafer": "./packages/components",
     "leafer-ui": "^1.0.1",
     "vue": "^3.4.33"
   },
@@ -42,7 +43,7 @@
     "sass": "^1.77.8",
     "tsx": "^4.16.2",
     "typescript": "^5.5.3",
-    "typescript-eslint": "^7.16.1",
+    "typescript-eslint": "^8.0.0-alpha.48",
     "vite": "^5.3.4",
     "vite-plugin-dts": "^3.9.1",
     "vitepress": "^1.3.1",

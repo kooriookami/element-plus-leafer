@@ -5,7 +5,7 @@
 <script setup lang="ts">
   import { Leafer, PointerEvent } from 'leafer-ui';
   import { Flow } from '@leafer-in/flow';
-  import { ElButton } from '@element-plus-leafer/components';
+  import { ElButton } from 'element-plus-leafer';
   import { ElMessage } from 'element-plus';
   import { onMounted, ref } from 'vue';
 

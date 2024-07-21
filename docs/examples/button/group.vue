@@ -5,7 +5,7 @@
 <script setup lang="ts">
   import { Leafer } from 'leafer-ui';
   import { Flow } from '@leafer-in/flow';
-  import { ElButton, ElButtonGroup } from '@element-plus-leafer/components';
+  import { ElButton, ElButtonGroup } from 'element-plus-leafer';
   import { onMounted, ref } from 'vue';
   import ArrowLeft from '@element-plus/icons-svg/arrow-left.svg?raw';
   import ArrowRight from '@element-plus/icons-svg/arrow-right.svg?raw';

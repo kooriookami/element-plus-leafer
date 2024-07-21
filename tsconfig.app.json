@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
     "paths": {
       "@/*": [
         "src/*"
@@ -9,6 +8,7 @@
     }
   },
   "include": [
+    "docs",
     "src",
   ]
 }

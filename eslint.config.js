@@ -19,7 +19,6 @@ export default [
         quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
         'object-curly-spacing': ['error', 'always'],
         'arrow-parens': ['error', 'as-needed'],
-        'spaced-comment': ['error', 'always'],
         'semi': [2, 'always'],
         // ts
         '@typescript-eslint/no-explicit-any': 'off',

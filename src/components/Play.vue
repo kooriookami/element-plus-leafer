@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { Leafer } from 'leafer-ui';
-  import { ElButton } from '@element-plus-leafer/components';
+  import { ElButton } from 'element-plus-leafer';
 
   const leafer = new Leafer({
     view: window,
