@@ -47,7 +47,8 @@ export default [
   ),
   {
     ignores: [
-      'dist/**',
+      '**/cache/**',
+      '**/dist/**',
     ],
   },
 ];
