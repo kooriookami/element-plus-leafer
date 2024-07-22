@@ -14,7 +14,7 @@
   import Star from '@element-plus/icons-svg/star.svg?raw';
   import Delete from '@element-plus/icons-svg/delete.svg?raw';
 
-  const container = ref(null);
+  const container = ref();
 
   onMounted(() => {
     const leafer = new Leafer({

@@ -9,7 +9,7 @@
   import { ElMessage } from 'element-plus';
   import { onMounted, ref } from 'vue';
 
-  const container = ref(null);
+  const container = ref();
 
   onMounted(() => {
     const leafer = new Leafer({

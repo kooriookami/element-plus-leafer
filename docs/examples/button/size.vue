@@ -9,7 +9,7 @@
   import { onMounted, ref } from 'vue';
   import Search from '@element-plus/icons-svg/search.svg?raw';
 
-  const container = ref(null);
+  const container = ref();
 
   onMounted(() => {
     const leafer = new Leafer({

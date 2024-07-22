@@ -8,7 +8,7 @@
   import { ElButton } from 'element-plus-leafer';
   import { onMounted, ref } from 'vue';
 
-  const container = ref(null);
+  const container = ref();
 
   onMounted(() => {
     const leafer = new Leafer({

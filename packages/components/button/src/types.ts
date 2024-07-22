@@ -1,4 +1,5 @@
 import type { Button } from './button';
+import type { IUIInputData } from '@leafer-ui/interface';
 
 export type ButtonProps = {
   text?: string
@@ -14,6 +15,7 @@ export type ButtonProps = {
   iconRight?: string
   disabled?: boolean
   color?: string
+  children?: IUIInputData[];
   onClick?: (...args: any) => any
 }
 

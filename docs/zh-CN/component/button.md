@@ -152,9 +152,9 @@ const Event = defineClientComponent(() => import('../../examples/button/event.vu
 | loading     | 是否为加载中状态     | `boolean`                                                                   | false   |
 | loadingIcon | 自定义加载中状态图标组件 | `string`                                                                    | Loading |
 | disabled    | 按钮是否为禁用状态    | `boolean`                                                                   | false   |
-| icon        | 左侧图标         | `string`                                                                    | —       |
-| iconRight   | 右侧图标         | `string`                                                                    | —       |
+| icon        | 图标组件         | `string`                                                                    | —       |
 | color       | 自定义按钮颜色      | `string`                                                                    | —       |
+| children    | 自定义额外内容      | `IUIInputData[]`                                                            | —       |
 | onClick     | 点击事件         | `Function`                                                                  | —       |
 
 ## ButtonGroup Props

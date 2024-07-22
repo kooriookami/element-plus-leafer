@@ -137,8 +137,8 @@ export class Button extends Component<ButtonProps> {
       loading,
       loadingIcon,
       icon,
-      iconRight,
       disabled,
+      children = [],
       onClick = NOOP,
     } = this.props;
 
@@ -210,11 +210,7 @@ export class Button extends Component<ButtonProps> {
             fill: disabledTextFill,
           },
         },
-        new Icon({
-          icon: iconRight,
-          color: textFill,
-          size: FontSize[size],
-        }),
+        ...children,
       ],
     });
 

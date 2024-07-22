@@ -13,7 +13,7 @@
   import Loading from '@element-plus/icons-svg/loading.svg?raw';
   import Search from '@element-plus/icons-svg/search.svg?raw';
 
-  const container = ref(null);
+  const container = ref();
 
   onMounted(() => {
     const leafer = new Leafer({
