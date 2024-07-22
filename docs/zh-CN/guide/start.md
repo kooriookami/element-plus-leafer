@@ -46,7 +46,7 @@ Element Plus Leafer 支持所有现代浏览器，默认语法为 ES2020。
 
 由于使用了 `Proxy` 方法，最低转义语法为 ES2015，固不支持 IE。
 
-## 开始体验（CDN 暂时有问题，请使用包管理器安装）
+## 开始体验
 
 下面是一个完整的 CDN 使用示例。[在线演示](https://codepen.io/kooriookami/pen/OJeNPLp)
 
