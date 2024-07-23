@@ -4,10 +4,7 @@
 
   const leafer = new Leafer({
     view: window,
-    wheel: {
-      disabled: true,
-      preventDefault: false,
-    },
+    type: 'draw',
   });
 
   const button = new ElButton(

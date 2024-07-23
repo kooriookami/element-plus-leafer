@@ -18,11 +18,8 @@
   onMounted(() => {
     const leafer = new Leafer({
       view: container.value,
+      type: 'draw',
       height: 20,
-      wheel: {
-        disabled: true,
-        preventDefault: false,
-      },
     });
 
     const icon1 = new ElIcon({ icon: Edit, size: 20 });

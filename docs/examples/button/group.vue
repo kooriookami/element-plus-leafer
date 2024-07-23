@@ -18,11 +18,8 @@
   onMounted(() => {
     const leafer = new Leafer({
       view: container.value,
+      type: 'draw',
       height: 32,
-      wheel: {
-        disabled: true,
-        preventDefault: false,
-      },
     });
 
     const groupButton1 = new ElButton({ text: 'Previous Page', type: 'primary', icon: ArrowLeft });
