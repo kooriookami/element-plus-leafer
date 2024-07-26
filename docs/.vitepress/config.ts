@@ -13,4 +13,13 @@ export default defineConfig({
       themeConfig: getThemeConfig('zh-CN'),
     },
   },
+  themeConfig: {
+    logo: '/images/element-plus-logo-small.svg',
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/kooriookami/element-plus-leafer' },
+    ],
+    search: {
+      provider: 'local',
+    },
+  },
 });
