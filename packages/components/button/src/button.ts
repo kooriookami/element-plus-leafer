@@ -1,6 +1,6 @@
 import { PointerEvent } from 'leafer-ui';
 import { Icon } from '@element-plus-leafer/components';
-import { BorderColor, Color, TextColor, ComponentSize, BorderRadius, FontSize } from '@element-plus-leafer/constants';
+import { BorderColor, Color, TextColor, ComponentSize, BorderRadius, FontSize, FillColor } from '@element-plus-leafer/constants';
 import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
 import Loading from '@element-plus/icons-svg/loading.svg?raw';
 import type { ButtonProps } from './types';
@@ -20,8 +20,8 @@ export const Gap = defineMap({
 
 export const buttonVariant = (color: string) => defineMap({
   default: {
-    fill: color ? color : Color.white,
-    stroke: color ? color : BorderColor.default,
+    fill: color ? color : FillColor.blank,
+    stroke: color ? color : BorderColor.base,
     textFill: color ? Color.white : TextColor.regular,
   },
   hover: {
@@ -35,7 +35,7 @@ export const buttonVariant = (color: string) => defineMap({
     textFill: color ? Color.white : Color.primary,
   },
   disabled: {
-    fill: color ? lighten(color, 50) : Color.white,
+    fill: color ? lighten(color, 50) : FillColor.blank,
     stroke: color ? lighten(color, 50) : BorderColor.light,
     textFill: color ? Color.white : TextColor.placeholder,
   },
@@ -43,22 +43,22 @@ export const buttonVariant = (color: string) => defineMap({
 
 export const buttonPlain = (color: string) => defineMap({
   default: {
-    fill: color ? lighten(color, 90) : Color.white,
-    stroke: color ? lighten(color, 50) : BorderColor.default,
+    fill: color ? lighten(color, 90) : FillColor.blank,
+    stroke: color ? lighten(color, 50) : BorderColor.base,
     textFill: color ? color : TextColor.regular,
   },
   hover: {
-    fill: color ? color : Color.white,
+    fill: color ? color : FillColor.blank,
     stroke: color ? color : Color.primary,
     textFill: color ? Color.white : Color.primary,
   },
   press: {
-    fill: color ? darken(color, 20) : Color.white,
+    fill: color ? darken(color, 20) : FillColor.blank,
     stroke: color ? darken(color, 20) : Color.primary,
     textFill: color ? Color.white : Color.primary,
   },
   disabled: {
-    fill: color ? lighten(color, 90) : Color.white,
+    fill: color ? lighten(color, 90) : FillColor.blank,
     stroke: color ? lighten(color, 80) : BorderColor.light,
     textFill: color ? lighten(color, 50) : TextColor.placeholder,
   },
