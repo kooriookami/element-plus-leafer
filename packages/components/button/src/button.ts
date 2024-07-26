@@ -214,6 +214,10 @@ export class Button extends Component<ButtonProps> {
       ],
     });
 
-    this.on(PointerEvent.CLICK, onClick);
+    if (loading || disabled) {
+      this.off(PointerEvent.CLICK);
+    } else {
+      this.on(PointerEvent.CLICK, onClick);
+    }
   }
 }

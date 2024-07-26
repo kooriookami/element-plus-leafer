@@ -17,7 +17,7 @@
       height: 40,
     });
 
-    const button11 = new ElButton({ text: 'Default', link: true });
+    const button11 = new ElButton({ text: 'Plain', link: true });
     const button12 = new ElButton({ text: 'Primary', type: 'primary', link: true });
     const button13 = new ElButton({ text: 'Success', type: 'success', link: true });
     const button14 = new ElButton({ text: 'Info', type: 'info', link: true });

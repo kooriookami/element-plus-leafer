@@ -20,11 +20,10 @@ export abstract class Component<Props extends Record<string, any>> extends Flow 
   }
 
   proxyProps(props: Props) {
-    const { render } = this;
     return new Proxy(props, {
-      set(obj, prop, value) {
+      set: (obj, prop, value) => {
         obj[prop as keyof Props] = value;
-        render();
+        this.render();
         return true;
       },
     });
