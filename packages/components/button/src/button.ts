@@ -88,7 +88,7 @@ export const buttonLink = (color: string) => defineMap({
 });
 
 export const getColor = (props: ButtonProps) => {
-  const { type, plain, link, color } = props;
+  const { type, plain, link, color, loading } = props;
 
   const _color = color ? color : type ? Color[type] : '';
 
@@ -102,19 +102,32 @@ export const getColor = (props: ButtonProps) => {
     }
   };
 
+  const fill = get('default', 'fill');
+  const stroke = get('default', 'stroke');
+  const textFill = get('default', 'textFill');
+  const hoverFill = get('hover', 'fill');
+  const hoverStroke = get('hover', 'stroke');
+  const hoverTextFill = get('hover', 'textFill');
+  const pressFill = get('press', 'fill');
+  const pressStroke = get('press', 'stroke');
+  const pressTextFill = get('press', 'textFill');
+  const disabledFill = loading ? lighten(fill, 30) : get('disabled', 'fill');
+  const disabledStroke = loading ? lighten(stroke, 30) : get('disabled', 'stroke');
+  const disabledTextFill = loading ? lighten(textFill, 30) : get('disabled', 'textFill');
+
   return {
-    fill: get('default', 'fill'),
-    stroke: get('default', 'stroke'),
-    textFill: get('default', 'textFill'),
-    hoverFill: get('hover', 'fill'),
-    hoverStroke: get('hover', 'stroke'),
-    hoverTextFill: get('hover', 'textFill'),
-    pressFill: get('press', 'fill'),
-    pressStroke: get('press', 'stroke'),
-    pressTextFill: get('press', 'textFill'),
-    disabledFill: get('disabled', 'fill'),
-    disabledStroke: get('disabled', 'stroke'),
-    disabledTextFill: get('disabled', 'textFill'),
+    fill,
+    stroke,
+    textFill,
+    hoverFill,
+    hoverStroke,
+    hoverTextFill,
+    pressFill,
+    pressStroke,
+    pressTextFill,
+    disabledFill,
+    disabledStroke,
+    disabledTextFill,
   };
 };
 
