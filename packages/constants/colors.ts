@@ -12,7 +12,7 @@ export const Color = defineMap({
   black: '#000000',
   white: '#ffffff',
   transparent: 'transparent',
-}, 'white');
+}, 'primary');
 
 export const TextColor = defineMap({
   primary: dark ? '#e5eaf3' : '#303133',
