@@ -4,7 +4,7 @@
 
   const leafer = new Leafer({
     view: window,
-    type: 'draw',
+    type: 'block',
   });
 
   const button = new ElButton(

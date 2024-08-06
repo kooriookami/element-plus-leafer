@@ -16,10 +16,6 @@ const Event = defineClientComponent(() => import('../../examples/button/event.vu
 
 常用的操作按钮。
 
-::: warning
-目前存在已知 BUG，存在的问题后续会继续优化。
-:::
-
 ## 基础用法
 
 使用 `type`、`plain`、`round` 和 `circle` 来定义按钮的样式。

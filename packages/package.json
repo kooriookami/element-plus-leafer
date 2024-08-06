@@ -1,6 +1,6 @@
 {
   "name": "element-plus-leafer",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Component Library for Leafer UI",
   "keywords": [
     "element-plus-leafer",
@@ -31,9 +31,9 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.1.0",
-    "@leafer-in/flow": "^1.0.1",
-    "@leafer-in/state": "^1.0.1",
-    "leafer-ui": "^1.0.1"
+    "@leafer-in/flow": "^1.0.2",
+    "@leafer-in/state": "^1.0.2",
+    "leafer-ui": "^1.0.2"
   },
   "browserslist": [
     "> 1%",

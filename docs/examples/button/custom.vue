@@ -13,7 +13,7 @@
   onMounted(() => {
     const leafer = new Leafer({
       view: container.value,
-      type: 'draw',
+      type: 'block',
       height: 32,
     });
 
