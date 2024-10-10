@@ -1,6 +1,7 @@
 import { Text } from 'leafer-ui';
 import { Flow } from '@leafer-in/flow';
 import '@leafer-in/state';
+import '@leafer-in/animate';
 import '@leafer-in/flow';
 import { FontFamily } from '@element-plus-leafer/constants';
 import type { IFlowInputData } from '@leafer-ui/interface';

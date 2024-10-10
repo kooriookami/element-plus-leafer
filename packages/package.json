@@ -31,9 +31,10 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.1.0",
-    "@leafer-in/flow": "^1.0.2",
-    "@leafer-in/state": "^1.0.2",
-    "leafer-ui": "^1.0.2"
+    "@leafer-in/animate": "^1.0.5",
+    "@leafer-in/flow": "^1.0.5",
+    "@leafer-in/state": "^1.0.5",
+    "leafer-ui": "^1.0.5"
   },
   "browserslist": [
     "> 1%",

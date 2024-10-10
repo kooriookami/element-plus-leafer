@@ -28,9 +28,9 @@
     button2.on(PointerEvent.DOUBLE_CLICK, () => {
       ElMessage('double click');
     });
-    const button3 = new ElButton({ text: 'Menu' });
+    const button3 = new ElButton({ text: 'Right Click' });
     button3.on(PointerEvent.MENU, () => {
-      ElMessage('menu');
+      ElMessage('right click');
     });
 
     const flow = new Flow({

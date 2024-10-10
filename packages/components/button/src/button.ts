@@ -179,10 +179,12 @@ export class Button extends Component<ButtonProps> {
       strokeWidth: 1,
       strokeAlign: 'inside',
       cornerRadius: round ? BorderRadius.round : circle ? BorderRadius.circle : BorderRadius[size],
+      origin: 'center',
       cursor: 'pointer',
       disabled: disabled || loading,
       flowAlign: 'center',
       gap: Gap[size],
+      button: true,
       hoverStyle: {
         fill: hoverFill,
         stroke: isSameColor(hoverStroke, hoverFill) ? undefined : hoverStroke,
