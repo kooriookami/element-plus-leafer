@@ -23,6 +23,7 @@
     "@element-plus-leafer/constants": "workspace:*",
     "@element-plus-leafer/utils": "workspace:*",
     "@element-plus/icons-svg": "^2.3.1",
+    "@leafer-in/animate": "^1.0.5",
     "@leafer-in/flow": "^1.0.5",
     "@leafer-in/state": "^1.0.5",
     "element-plus": "^2.8.4",

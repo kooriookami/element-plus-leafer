@@ -30,6 +30,7 @@ $ bun add element-plus-leafer
 <script src="https://unpkg.com/leafer-ui"></script>
 <script src="https://unpkg.com/@leafer-in/flow"></script>
 <script src="https://unpkg.com/@leafer-in/state"></script>
+<script src="https://unpkg.com/@leafer-in/animate"></script>
 <script src="https://unpkg.com/element-plus-leafer"></script>
 <script>
   const { Leafer } = LeaferUI;

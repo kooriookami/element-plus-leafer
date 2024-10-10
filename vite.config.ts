@@ -40,7 +40,7 @@ const buildFullConfig = defineConfig({
   build: {
     ...baseBuildConfig,
     rollupOptions: {
-      external: ['leafer-ui', '@leafer-in/flow', '@leafer-in/state'],
+      external: ['leafer-ui', '@leafer-in/flow', '@leafer-in/state', '@leafer-in/animate'],
       output: [
         {
           name: 'ElementPlusLeafer',
@@ -50,6 +50,7 @@ const buildFullConfig = defineConfig({
             'leafer-ui': 'LeaferUI',
             '@leafer-in/flow': 'LeaferIN.flow',
             '@leafer-in/state': 'LeaferIN.state',
+            '@leafer-in/animate': 'LeaferIN.animate',
           },
           entryFileNames: '[name].full.js',
         },
