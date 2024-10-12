@@ -26,10 +26,10 @@
     "@leafer-in/animate": "^1.0.5",
     "@leafer-in/flow": "^1.0.5",
     "@leafer-in/state": "^1.0.5",
-    "element-plus": "^2.8.4",
+    "element-plus": "^2.8.5",
     "element-plus-leafer": "./packages/components",
     "leafer-ui": "^1.0.5",
-    "vue": "^3.5.11"
+    "vue": "^3.5.12"
   },
   "devDependencies": {
     "@eslint/js": "^9.12.0",
@@ -37,15 +37,15 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "del": "^8.0.0",
     "eslint": "^9.12.0",
-    "eslint-plugin-vue": "^9.28.0",
+    "eslint-plugin-vue": "^9.29.0",
     "gulp": "^5.0.0",
-    "gulp-shell": "^0.6.3",
-    "sass": "^1.79.4",
+    "gulp-shell": "^0.8.0",
+    "sass": "^1.79.5",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.8.1",
     "vite": "^5.4.8",
-    "vite-plugin-dts": "^4.2.3",
+    "vite-plugin-dts": "^4.2.4",
     "vitepress": "^1.4.0",
     "vue-tsc": "^2.1.6"
   },
