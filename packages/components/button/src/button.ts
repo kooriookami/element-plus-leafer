@@ -142,7 +142,7 @@ export class Button extends Component<ButtonProps> {
 
   render() {
     const {
-      text,
+      text = '',
       size = '',
       link,
       round,

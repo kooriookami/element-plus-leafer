@@ -4,7 +4,7 @@
 
 <script setup lang="ts">
   import { Leafer } from 'leafer-ui';
-  import { ElCard } from 'element-plus-leafer';
+  import { ElButton, ElCard } from 'element-plus-leafer';
   import { onMounted, ref } from 'vue';
 
   const container = ref();
@@ -16,11 +16,20 @@
     });
 
     const card = new ElCard({
-      header: 'Card name',
-      footer: {
-        tag: 'Text',
-        text: 'Footer content',
+      header: {
+        tag: 'Flow',
+        width: 360,
+        flowAlign: 'center',
+        gap: 'auto',
+        children: [
+          {
+            tag: 'Text',
+            text: 'Card name',
+          },
+          new ElButton({ text: 'Operate', type: 'primary', link: true }),
+        ],
       },
+      footer: 'Footer content',
       children: [
         {
           tag: 'Flow',

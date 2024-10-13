@@ -47,7 +47,7 @@ export class Card extends Component<CardProps> {
               tag: 'Text',
               text: header,
             } : header,
-          ].filter(value => value),
+          ].filter(value => !!value),
         },
         {
           tag: 'Flow',
@@ -67,7 +67,7 @@ export class Card extends Component<CardProps> {
               tag: 'Text',
               text: footer,
             } : footer,
-          ].filter(value => value),
+          ].filter(value => !!value),
         },
       ],
     });

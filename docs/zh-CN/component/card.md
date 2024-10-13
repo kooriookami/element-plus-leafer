@@ -15,7 +15,7 @@ const Shadow = defineClientComponent(() => import('../../examples/card/shadow.vu
 
 卡片包含标题，内容以及操作区域。
 
-Card 组件由 `header`、`body` 和 `footer` 组成。`header` 和 `footer` 是可选的，其内容可以是字符串或 Leafer 元素。
+Card 组件由 `header`、`body` 和 `footer` 组成。其中 `header` 和 `footer` 是可选的，其内容可以是字符串或 Leafer 元素。
 
 <Basic />
 
