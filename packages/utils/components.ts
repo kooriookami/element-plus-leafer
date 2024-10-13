@@ -3,11 +3,13 @@ import { Flow } from '@leafer-in/flow';
 import '@leafer-in/state';
 import '@leafer-in/animate';
 import '@leafer-in/flow';
-import { FontFamily } from '@element-plus-leafer/constants';
+import { FontFamily, FontSize, TextColor } from '@element-plus-leafer/constants';
 import type { IFlowInputData } from '@leafer-ui/interface';
 
 export function resetAttr() {
   Text.changeAttr('fontFamily', FontFamily);
+  Text.changeAttr('fontSize', FontSize.default);
+  Text.changeAttr('fill', TextColor.primary);
 }
 
 export abstract class Component<Props extends Record<string, any>> extends Flow {

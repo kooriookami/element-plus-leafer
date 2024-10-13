@@ -19,7 +19,6 @@
     const leafer = new Leafer({
       view: container.value,
       type: 'block',
-      height: 32,
     });
 
     const groupButton1 = new ElButton({ text: 'Previous Page', type: 'primary', icon: ArrowLeft });
@@ -53,5 +52,6 @@
     });
 
     leafer.add(flow);
+    leafer.height = leafer.renderBounds.height;
   });
 </script>

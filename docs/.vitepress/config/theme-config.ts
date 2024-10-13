@@ -45,6 +45,10 @@ export function getThemeConfig(lang: string): DefaultTheme.Config {
               link: `${prefix}/component/button`,
             },
             {
+              text: 'Card 卡片',
+              link: `${prefix}/component/card`,
+            },
+            {
               text: 'Icon 图标',
               link: `${prefix}/component/icon`,
             },

@@ -177,7 +177,6 @@ export class Button extends Component<ButtonProps> {
       padding: link ? undefined : Padding[size],
       stroke: isSameColor(stroke, fill) ? undefined : stroke,
       strokeWidth: 1,
-      strokeAlign: 'inside',
       cornerRadius: round ? BorderRadius.round : circle ? BorderRadius.circle : BorderRadius[size],
       origin: 'center',
       cursor: 'pointer',
@@ -185,6 +184,9 @@ export class Button extends Component<ButtonProps> {
       flowAlign: 'center',
       gap: Gap[size],
       button: true,
+      transition: {
+        duration: 0.1,
+      },
       hoverStyle: {
         fill: hoverFill,
         stroke: isSameColor(hoverStroke, hoverFill) ? undefined : hoverStroke,

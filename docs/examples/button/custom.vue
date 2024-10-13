@@ -14,7 +14,6 @@
     const leafer = new Leafer({
       view: container.value,
       type: 'block',
-      height: 32,
     });
 
     const button1 = new ElButton({ text: 'Default', color: '#626aef' });
@@ -28,5 +27,6 @@
     });
 
     leafer.add(flow);
+    leafer.height = leafer.renderBounds.height;
   });
 </script>
