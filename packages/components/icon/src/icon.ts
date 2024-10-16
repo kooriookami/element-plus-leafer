@@ -1,5 +1,6 @@
 import { Platform } from 'leafer-ui';
 import { Component } from '@element-plus-leafer/utils';
+import { TextColor } from '@element-plus-leafer/constants';
 import type { IconProps } from './types';
 import type { IFlowInputData } from '@leafer-ui/interface';
 
@@ -29,7 +30,7 @@ export class Icon extends Component<IconProps> {
   }
 
   render() {
-    const { icon = '', color, size, loading } = this.props;
+    const { icon = '', color = TextColor.primary, size, loading } = this.props;
 
     this.set({
       flow: false,
