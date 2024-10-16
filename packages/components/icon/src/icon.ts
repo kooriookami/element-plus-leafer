@@ -8,8 +8,8 @@ export const isSvg = (value: string) => {
   return /<svg.*?>.*?<\/svg>/.test(value);
 };
 
-export const fillSvg = (value: string, color?: string) => {
-  if (!isSvg(value) || !color) {
+export const fillSvg = (value: string, color: string = TextColor.primary) => {
+  if (!isSvg(value)) {
     return value;
   }
   if (/fill=".*?"/.test(value)) {
@@ -30,7 +30,7 @@ export class Icon extends Component<IconProps> {
   }
 
   render() {
-    const { icon = '', color = TextColor.primary, size, loading } = this.props;
+    const { icon = '', color, size, loading } = this.props;
 
     this.set({
       flow: false,
