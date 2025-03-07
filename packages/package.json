@@ -31,10 +31,10 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^4.1.0",
-    "@leafer-in/animate": "^1.0.9",
-    "@leafer-in/flow": "^1.0.9",
-    "@leafer-in/state": "^1.0.9",
-    "leafer-ui": "^1.0.9"
+    "@leafer-in/animate": "^1.4.2",
+    "@leafer-in/flow": "^1.4.2",
+    "@leafer-in/state": "^1.4.2",
+    "leafer-ui": "^1.4.2"
   },
   "browserslist": [
     "> 1%",
