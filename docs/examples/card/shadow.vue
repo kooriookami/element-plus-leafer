@@ -13,7 +13,7 @@
   onMounted(() => {
     const leafer = new Leafer({
       view: container.value,
-      type: 'block',
+      grow: true,
     });
 
     const card1 = new ElCard({
@@ -55,6 +55,5 @@
     });
 
     leafer.add(flow);
-    leafer.height = leafer.renderBounds.height;
   });
 </script>

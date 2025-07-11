@@ -1,7 +1,7 @@
 import { Component } from '@element-plus-leafer/utils';
 import { BackgroundColor, BorderColor, BorderRadius, BoxShadow } from '@element-plus-leafer/constants';
 import type { CardProps } from './types';
-import type { IFlowInputData } from '@leafer-ui/interface';
+import type { IFlowInputData } from 'leafer';
 
 export class Card extends Component<CardProps> {
   constructor(props: CardProps, data?: IFlowInputData) {

@@ -1,5 +1,5 @@
 import type { Button } from './button';
-import type { IUIInputData } from '@leafer-ui/interface';
+import type { IUIInputData } from 'leafer';
 
 export type ButtonProps = {
   text?: string

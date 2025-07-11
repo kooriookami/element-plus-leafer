@@ -1,7 +1,7 @@
-import { MathHelper } from 'leafer-ui';
+import { MathHelper } from 'leafer';
 import { Component } from '@element-plus-leafer/utils';
 import type { ButtonGroupProps } from './types';
-import type { IFlowInputData } from '@leafer-ui/interface';
+import type { IFlowInputData } from 'leafer';
 
 export class ButtonGroup extends Component<ButtonGroupProps> {
   constructor(props: ButtonGroupProps, data?: IFlowInputData) {

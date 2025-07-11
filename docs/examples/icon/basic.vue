@@ -18,7 +18,7 @@
   onMounted(() => {
     const leafer = new Leafer({
       view: container.value,
-      type: 'block',
+      grow: true,
     });
 
     const icon1 = new ElIcon({ icon: Edit, size: 20 });
@@ -33,6 +33,5 @@
     });
 
     leafer.add(flow);
-    leafer.height = leafer.renderBounds.height;
   });
 </script>

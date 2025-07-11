@@ -14,7 +14,7 @@
   onMounted(() => {
     const leafer = new Leafer({
       view: container.value,
-      type: 'block',
+      grow: true,
     });
 
     const button1 = new ElButton({ text: 'Loading', type: 'primary', loading: true });
@@ -26,6 +26,5 @@
     });
 
     leafer.add(flow);
-    leafer.height = leafer.renderBounds.height;
   });
 </script>

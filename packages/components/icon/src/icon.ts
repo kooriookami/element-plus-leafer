@@ -1,8 +1,8 @@
-import { Platform } from 'leafer-ui';
+import { Platform } from 'leafer';
 import { Component } from '@element-plus-leafer/utils';
 import { TextColor } from '@element-plus-leafer/constants';
 import type { IconProps } from './types';
-import type { IFlowInputData } from '@leafer-ui/interface';
+import type { IFlowInputData } from 'leafer';
 
 export const isSvg = (value: string) => {
   return /<svg.*?>.*?<\/svg>/.test(value);
@@ -19,8 +19,6 @@ export const fillSvg = (value: string, color: string = TextColor.primary) => {
 };
 
 export class Icon extends Component<IconProps> {
-  timer: ReturnType<typeof setInterval> | null = null;
-
   constructor(props: IconProps, data?: IFlowInputData) {
     super(props, data);
   }
@@ -37,6 +35,7 @@ export class Icon extends Component<IconProps> {
       width: size,
       height: size,
       visible: !!icon || 0,
+      overflow: 'hide',
       children: [
         {
           tag: 'Rect',
@@ -45,20 +44,19 @@ export class Icon extends Component<IconProps> {
             url: isSvg(icon) ? Platform.toURL(fillSvg(icon, color), 'svg') : icon,
             mode: 'fit',
           },
+          origin: 'center',
           width: size,
           height: size,
+          animation: loading ? {
+            style: {
+              rotation: 360,
+            },
+            easing: 'linear',
+            duration: 2,
+            loop: true,
+          } : undefined,
         },
       ],
     });
-
-    if (this.timer) {
-      clearInterval(this.timer);
-      this.timer = null;
-    }
-    if (loading) {
-      this.timer = setInterval(() => {
-        this.children[0].rotateOf('center', 3);
-      }, 16.7);
-    }
   }
 }

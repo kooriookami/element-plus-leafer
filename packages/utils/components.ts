@@ -1,10 +1,6 @@
-import { Text } from 'leafer-ui';
-import { Flow } from '@leafer-in/flow';
-import '@leafer-in/state';
-import '@leafer-in/animate';
-import '@leafer-in/flow';
+import { Text, Flow } from 'leafer';
 import { FontFamily, FontSize, TextColor } from '@element-plus-leafer/constants';
-import type { IFlowInputData } from '@leafer-ui/interface';
+import type { IFlowInputData } from 'leafer';
 
 export function resetAttr() {
   Text.changeAttr('fontFamily', FontFamily);

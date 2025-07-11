@@ -23,33 +23,30 @@
     "@element-plus-leafer/constants": "workspace:*",
     "@element-plus-leafer/utils": "workspace:*",
     "@element-plus/icons-svg": "^2.3.1",
-    "@leafer-in/animate": "^1.4.2",
-    "@leafer-in/flow": "^1.4.2",
-    "@leafer-in/state": "^1.4.2",
-    "element-plus": "^2.9.5",
+    "element-plus": "^2.10.3",
     "element-plus-leafer": "./packages/components",
-    "leafer-ui": "^1.4.2",
-    "vue": "^3.5.13"
+    "leafer": "^1.8.0",
+    "vue": "^3.5.17"
   },
   "devDependencies": {
-    "@eslint/js": "^9.21.0",
+    "@eslint/js": "^9.30.1",
     "@types/gulp": "^4.0.17",
-    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue": "^6.0.0",
     "del": "^8.0.0",
-    "eslint": "^9.21.0",
-    "eslint-plugin-vue": "^10.0.0",
-    "gulp": "^5.0.0",
+    "eslint": "^9.30.1",
+    "eslint-plugin-vue": "^10.3.0",
+    "gulp": "^5.0.1",
     "gulp-shell": "^0.8.0",
-    "sass": "^1.85.1",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2",
-    "typescript-eslint": "^8.26.0",
-    "vite": "^6.2.0",
-    "vite-plugin-dts": "^4.5.3",
+    "sass": "^1.89.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.36.0",
+    "vite": "^7.0.4",
+    "vite-plugin-dts": "^4.5.4",
     "vitepress": "^1.6.3",
-    "vue-tsc": "^2.2.8"
+    "vue-tsc": "^3.0.1"
   },
   "engines": {
-    "node": ">= 18.18"
+    "node": ">= 20"
   }
 }

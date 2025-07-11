@@ -1,15 +1,15 @@
-import { PointerEvent } from 'leafer-ui';
+import { PointerEvent } from 'leafer';
 import { Icon } from '@element-plus-leafer/components';
 import { BorderColor, Color, TextColor, ComponentSize, BorderRadius, FontSize, FillColor } from '@element-plus-leafer/constants';
 import { Component, darken, NOOP, lighten, isSameColor, defineMap } from '@element-plus-leafer/utils';
 import Loading from '@element-plus/icons-svg/loading.svg?raw';
 import type { ButtonProps } from './types';
-import type { IFlowInputData } from '@leafer-ui/interface';
+import type { IFlowInputData } from 'leafer';
 
 export const Padding = defineMap({
-  large: [13, 20],
-  default: [9, 16],
-  small: [6, 12],
+  large: [0, 20],
+  default: [0, 16],
+  small: [0, 12],
 });
 
 export const Gap = defineMap({
@@ -214,7 +214,6 @@ export class Button extends Component<ButtonProps> {
           fill: textFill,
           fontSize: FontSize[size],
           fontWeight: 500,
-          lineHeight: FontSize[size],
           disabled,
           visible: !!text || 0,
           hoverStyle: {
