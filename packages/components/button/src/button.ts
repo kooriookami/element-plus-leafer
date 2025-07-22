@@ -6,19 +6,19 @@ import Loading from '@element-plus/icons-svg/loading.svg?raw';
 import type { ButtonProps } from './types';
 import type { IFlowInputData } from 'leafer';
 
-export const Padding = defineMap({
+export const Padding = defineMap(() => ({
   large: [0, 20],
   default: [0, 16],
   small: [0, 12],
-});
+}));
 
-export const Gap = defineMap({
+export const Gap = defineMap(() => ({
   large: 8,
   default: 6,
   small: 4,
-});
+}));
 
-export const buttonVariant = (color: string) => defineMap({
+export const buttonVariant = (color: string) => defineMap(() => ({
   default: {
     fill: color ? color : FillColor.blank,
     stroke: color ? color : BorderColor.base,
@@ -39,9 +39,9 @@ export const buttonVariant = (color: string) => defineMap({
     stroke: color ? lighten(color, 50) : BorderColor.light,
     textFill: color ? Color.white : TextColor.placeholder,
   },
-});
+}));
 
-export const buttonPlain = (color: string) => defineMap({
+export const buttonPlain = (color: string) => defineMap(() => ({
   default: {
     fill: color ? lighten(color, 90) : FillColor.blank,
     stroke: color ? lighten(color, 50) : BorderColor.base,
@@ -62,9 +62,9 @@ export const buttonPlain = (color: string) => defineMap({
     stroke: color ? lighten(color, 80) : BorderColor.light,
     textFill: color ? lighten(color, 50) : TextColor.placeholder,
   },
-});
+}));
 
-export const buttonLink = (color: string) => defineMap({
+export const buttonLink = (color: string) => defineMap(() => ({
   default: {
     fill: 'transparent',
     stroke: 'transparent',
@@ -85,7 +85,7 @@ export const buttonLink = (color: string) => defineMap({
     stroke: 'transparent',
     textFill: color ? lighten(color, 50) : TextColor.placeholder,
   },
-});
+}));
 
 export const getColor = (props: ButtonProps) => {
   const { type, plain, link, color, loading } = props;

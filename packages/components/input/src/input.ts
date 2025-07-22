@@ -3,11 +3,11 @@ import { Component, defineMap } from '@element-plus-leafer/utils';
 import type { InputProps } from './types';
 import type { IFlowInputData } from 'leafer';
 
-export const Padding = defineMap({
+export const Padding = defineMap(() => ({
   large: [0, 16],
   default: [0, 12],
   small: [0, 8],
-});
+}));
 
 export class Input extends Component<InputProps> {
   constructor(props: InputProps, data?: IFlowInputData) {

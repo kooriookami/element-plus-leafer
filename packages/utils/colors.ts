@@ -7,13 +7,11 @@ export function isDark() {
 }
 
 export function darken(color: ColorInput, amount: number = 20) {
-  const dark = isDark();
-  return new TinyColor(color).mix(dark ? Color.white : Color.black, amount).toString();
+  return new TinyColor(color).mix(isDark() ? Color.white : Color.black, amount).toString();
 }
 
 export function lighten(color: ColorInput, amount: number = 20) {
-  const dark = isDark();
-  return new TinyColor(color).mix(dark ? BackgroundColor.base : Color.white, amount).toString();
+  return new TinyColor(color).mix(isDark() ? BackgroundColor.base : Color.white, amount).toString();
 }
 
 export function isSameColor(color1: ColorInput, color2: ColorInput) {

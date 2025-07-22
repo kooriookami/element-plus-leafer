@@ -1,7 +1,8 @@
-export function defineMap<Map extends Record<string, any>>(map: Map, fallback: string = 'default') {
-  return new Proxy(map, {
+export function defineMap<Map extends Record<string, any>>(mapFn: (() => Map), fallback: string = 'default') {
+  return new Proxy({}, {
     get(target, prop) {
-      return prop in target ? target[prop as keyof Map] : target[fallback];
+      const map = mapFn();
+      return prop in map ? map[prop as keyof Map] : map[fallback];
     },
   }) as Map & {
     [key: string]: any;

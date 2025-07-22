@@ -16,6 +16,20 @@ export abstract class Component<Props extends Record<string, any>> extends Flow 
     resetAttr();
     this.props = this.proxyProps(props);
     this.render();
+    const observer = new MutationObserver(mutations => {
+      for (const mutation of mutations) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          this.render();
+        }
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+      childList: false,
+      subtree: false,
+    });
   }
 
   proxyProps(props: Props) {
